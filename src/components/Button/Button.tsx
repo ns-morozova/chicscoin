@@ -9,7 +9,7 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ href, onClick, className, children }) => {
     const baseClasses =
-        'group relative h-[52px] flex items-center justify-center overflow-hidden rounded-lg bg-white px-6 py-3.5 text-base font-medium uppercase tracking-wider text-gray-950 shadow-sm ring-1 ring-gray-200 transition-colors duration-300 hover:border-teal-500/50 hover:text-teal-700 hover:ring-teal-300';
+        'group relative h-[52px] flex items-center justify-center overflow-hidden rounded-lg bg-white px-6 py-3.5 text-base font-medium tracking-wider text-gray-950 shadow-sm ring-1 ring-gray-200 transition-colors duration-300 hover:border-pink-500/50 hover:text-pink-700 hover:ring-pink-300';
 
     return href ? (
         // Если передан href, рендерим ссылку <a>
@@ -30,8 +30,8 @@ const Button: React.FC<ButtonProps> = ({ href, onClick, className, children }) =
                     />
                 </svg>
             </span>
-            <span className="absolute inset-0 rounded-lg ring-1 ring-inset ring-teal-500/10 group-hover:ring-teal-500/20 transition-all duration-300"></span>
-            <span className="absolute -bottom-0 left-0 h-[1px] w-0 bg-gradient-to-r from-teal-500/60 to-slate-500/60 transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute inset-0 rounded-lg ring-1 ring-inset ring-pink-500/10 group-hover:ring-pink-500/20 transition-all duration-300"></span>
+            <span className="absolute -bottom-0 left-0 h-[1px] w-0 bg-gradient-to-r from-pink-500/60 to-red-500/60 transition-all duration-300 group-hover:w-full"></span>
         </a>
     ) : (
         // Если href не передан, рендерим кнопку <button>
@@ -52,8 +52,8 @@ const Button: React.FC<ButtonProps> = ({ href, onClick, className, children }) =
                     />
                 </svg>
             </span>
-            <span className="absolute inset-0 rounded-lg ring-1 ring-inset ring-teal-500/10 group-hover:ring-teal-500/20 transition-all duration-300"></span>
-            <span className="absolute -bottom-0 left-0 h-[1px] w-0 bg-gradient-to-r from-teal-500/60 to-slate-500/60 transition-all duration-300 group-hover:w-full"></span>
+            <span className="absolute inset-0 rounded-lg ring-1 ring-inset ring-pink-500/10 group-hover:ring-pink-500/20 transition-all duration-300"></span>
+            <span className="absolute -bottom-0 left-0 h-[1px] w-0 bg-gradient-to-r from-pink-500/60 to-red-500/60 transition-all duration-300 group-hover:w-full"></span>
         </button>
     );
 };

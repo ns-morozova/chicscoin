@@ -20,11 +20,17 @@ const Navbar: React.FC = () => {
                 <nav
                     aria-label="Global"
                     className="relative mx-auto mt-4 rounded-full shadow-lg lg:mt-6 overflow-hidden"
-                    style={{
-                        background: 'linear-gradient(90deg, #1B0643, #8F0050, #BC0F58, #E7005B, #FF6068, #FF7475)',
-                    }}
                 >
-                    <div className="relative bg-gray-200/20 backdrop-blur-md flex items-center justify-end p-2 sm:p-6 lg:justify-center">
+                    <div
+                        style={{
+                            position: 'absolute',
+                            inset: 0,
+                            background: 'linear-gradient(90deg, #1B0643, #8F0050, #BC0F58, #E7005B, #FF6068, #FF7475)',
+                            opacity: 0.8,
+                            zIndex: -1,
+                        }}
+                    ></div>
+                    <div className="relative bg-gray-200/10 backdrop-blur-md flex items-center justify-end p-2 sm:p-6 lg:justify-center">
                         {/* Логотип */}
                         <div className="absolute left-2 sm:left-3 lg:left-2 flex lg:flex-1">
                             <a href="#" className="-m-1.5 p-1.5">
