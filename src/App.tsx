@@ -1,11 +1,11 @@
 import React from 'react';
 import { Home } from './pages';
+import './i18n';
 
 const App: React.FC = () => {
   return (
     <div>
       <Home />
-      <div className="bg-crimson-200 w-20 h-20"></div>
     </div>
   );
 };

@@ -1,0 +1,11 @@
+{
+    "navbar": {
+        "logo": "Your Company",
+        "menu": {
+            "home": "Ideology",
+            "about": "Tokenomics",
+            "services": "Roadmap",
+            "contact": "Social Media"
+        }
+    }
+}
