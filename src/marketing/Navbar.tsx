@@ -19,7 +19,10 @@ const Navbar: React.FC = () => {
             <div className="mx-auto max-w-7xl px-4 lg:px-8">
                 <nav
                     aria-label="Global"
-                    className="relative mx-auto mt-4 rounded-full bg-[#E7005B]/60 shadow-lg lg:mt-6 overflow-hidden"
+                    className="relative mx-auto mt-4 rounded-full shadow-lg lg:mt-6 overflow-hidden"
+                    style={{
+                        background: 'linear-gradient(90deg, #1B0643, #8F0050, #BC0F58, #E7005B, #FF6068, #FF7475)',
+                    }}
                 >
                     <div className="relative bg-gray-200/20 backdrop-blur-md flex items-center justify-end p-2 sm:p-6 lg:justify-center">
                         {/* Логотип */}

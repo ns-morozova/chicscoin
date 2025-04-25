@@ -7,5 +7,10 @@
             "services": "Roadmap",
             "contact": "Social Media"
         }
+    },
+    "hero": {
+        "title": "chics coin",
+        "description": "New level of interaction in the gaming community",
+        "button": "Learn more"
     }
 }

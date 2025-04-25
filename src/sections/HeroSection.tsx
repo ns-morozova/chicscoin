@@ -1,7 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Button from '../components/Button';
 
 const HeroSection: React.FC = () => {
+    const { t } = useTranslation();
     return (
         <section className="relative w-full">
             <img
@@ -11,9 +13,9 @@ const HeroSection: React.FC = () => {
             />
             <div className="absolute inset-0 w-full h-full bg-black/50"></div>
             
-            <div className="absolute left-1/2 -translate-1/2 top-1/2 lg:top-1/4">
+            <div className="flex flex-col items-center gap-1 absolute left-1/2 -translate-1/2 top-1/2 lg:top-1/4">
                 <h1
-                    className="relative font-audiowide font-bold uppercase text-2xl sm:text-3xl md:text-6xl lg:text-7xl xl:text-8xl"
+                    className="relative font-audiowide font-bold text-center uppercase text-nowrap text-3xl md:text-6xl lg:text-7xl xl:text-8xl"
                     style={{
                         background: 'linear-gradient(90deg, #1B0643, #8F0050, #BC0F58, #E7005B, #FF6068, #FF7475)',
                         WebkitBackgroundClip: 'text',
@@ -21,8 +23,12 @@ const HeroSection: React.FC = () => {
                         color: 'transparent',
                     }}
                 >
-                    chics coin
+                    {t('hero.title')}
                 </h1>
+                <p className="text-white text-center text-sm md:text-base lg:text-lg">
+                    {t('hero.description')}
+                </p>
+                <Button className="max-w-max mt-6 lg:mt-10">{t('hero.button')}</Button>
                 
             </div>
         </section>
