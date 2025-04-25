@@ -3,6 +3,10 @@ module.exports = {
     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
     theme: {
         extend: {
+            fontFamily: {
+                inter: ['Inter', 'sans-serif'],
+                audiowide: ['Audiowide', 'cursive'],
+            },
             colors: {
                 'crimson': {
                     '50': '#FF7475',
