@@ -7,6 +7,10 @@ module.exports = {
                 inter: ['Inter', 'sans-serif'],
                 audiowide: ['Audiowide', 'cursive'],
             },
+            screens: {
+                '3xl': '1680px',
+                '4xl': '1920px',
+            },
             colors: {
                 'crimson': {
                     '50': '#FF7475',

@@ -30,12 +30,12 @@ const Navbar: React.FC = () => {
                             zIndex: -1,
                         }}
                     ></div>
-                    <div className="relative bg-gray-200/5 backdrop-blur-2xl flex items-center justify-end p-2 sm:p-6 lg:justify-center">
+                    <div className="relative bg-gray-200/5 backdrop-blur-2xl flex items-center justify-end p-2 sm:p-3 md:p-4 lg:justify-center lg:py-5">
                         {/* Логотип */}
-                        <div className="absolute left-2 sm:left-3 lg:left-2 flex lg:flex-1">
+                        <div className="lg:hidden absolute left-2 sm:left-3 lg:left-2 flex lg:flex-1">
                             <a href="#" className="-m-1.5 p-1.5">
                                 <span className="sr-only">{t('navbar.logo')}</span>
-                                <div className="w-8 sm:w-14 lg:w-16 h-auto rounded-full overflow-hidden">
+                                <div className="w-8 sm:w-10 md:w-11 lg:w-16 h-auto rounded-full overflow-hidden">
                                     <img
                                         alt={t('navbar.logo')}
                                         src="/images/chiks-coin.png"
@@ -103,7 +103,7 @@ const Navbar: React.FC = () => {
             {/* Мобильное меню */}
             <Dialog open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} className="lg:hidden">
                 <div className="fixed inset-0 z-10 bg-black/50" />
-                <DialogPanel className="fixed inset-y-0 right-0 w-full overflow-y-auto bg-[#BC0F58] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10 z-50">
+                <DialogPanel className="fixed inset-y-0 right-0 w-full overflow-y-auto bg-[#141414] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10 z-50">
                     <div className="flex items-center justify-end">
                         <button
                             type="button"

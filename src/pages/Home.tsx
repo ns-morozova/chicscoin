@@ -4,7 +4,7 @@ import { HeroSection, Ideology } from '../sections';
 
 const Home: React.FC = () => {
     return (
-        <div className="overflow-hidden">
+        <div className="relative overflow-hidden">
             <Navbar />
             <HeroSection />
             <Ideology />
