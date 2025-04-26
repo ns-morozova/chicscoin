@@ -26,11 +26,11 @@ const Navbar: React.FC = () => {
                             position: 'absolute',
                             inset: 0,
                             background: 'linear-gradient(90deg, #1B0643, #8F0050, #BC0F58, #E7005B, #FF6068, #FF7475)',
-                            opacity: 0.8,
+                            opacity: 0.7,
                             zIndex: -1,
                         }}
                     ></div>
-                    <div className="relative bg-gray-200/10 backdrop-blur-md flex items-center justify-end p-2 sm:p-6 lg:justify-center">
+                    <div className="relative bg-gray-200/5 backdrop-blur-2xl flex items-center justify-end p-2 sm:p-6 lg:justify-center">
                         {/* Логотип */}
                         <div className="absolute left-2 sm:left-3 lg:left-2 flex lg:flex-1">
                             <a href="#" className="-m-1.5 p-1.5">
@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
                         </div>
 
                         {/* Переключатель языка */}
-                        <div className="lang-switcher bg-gray-200/20 hover:bg-gray-200/40 backdrop-blur-md rounded-md pr-2 transition-colors duration-300 hidden lg:block lg:absolute lg:right-6 lg:top-1/2 lg:-translate-y-1/2">
+                        <div className="lang-switcher pr-2 transition-colors duration-300 hidden lg:block lg:absolute lg:right-6 lg:top-1/2 lg:-translate-y-1/2">
                             <select
                                 className="selector bg-transparent text-white p-1.5 outline-none cursor-pointer"
                                 onChange={(e) => changeLanguage(e.target.value)}

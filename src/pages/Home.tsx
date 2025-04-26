@@ -1,12 +1,13 @@
 import React from 'react';
 import { Navbar } from '../marketing';
-import { HeroSection } from '../sections';
+import { HeroSection, Ideology } from '../sections';
 
 const Home: React.FC = () => {
     return (
-        <div>
+        <div className="overflow-hidden">
             <Navbar />
             <HeroSection />
+            <Ideology />
         </div>
     );
 };

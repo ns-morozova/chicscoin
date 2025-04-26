@@ -9,7 +9,7 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ href, onClick, className, children }) => {
     const baseClasses =
-        'group relative h-[52px] flex items-center justify-center overflow-hidden rounded-lg bg-white px-6 py-3.5 text-base font-medium tracking-wider text-gray-950 shadow-sm ring-1 ring-gray-200 transition-colors duration-300 hover:border-pink-500/50 hover:text-pink-700 hover:ring-pink-300';
+        'group relative h-[52px] flex items-center justify-center overflow-hidden rounded-full bg-white px-6 py-3.5 text-base font-medium tracking-wider text-gray-950 shadow-sm ring-1 ring-gray-200 transition-colors duration-300 hover:border-pink-500/50 hover:text-pink-700 hover:ring-pink-300';
 
     return href ? (
         // Если передан href, рендерим ссылку <a>
