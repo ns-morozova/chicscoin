@@ -51,7 +51,7 @@ const CardIdeology: React.FC<CardIdeologyProps> = ({ textKey, icon, className })
             )}
 
             {/* Текст */}
-            <p className="relative text-left text-sm md:text-base text-white transition-colors duration-300 group-hover:text-teal-500">
+            <p className="relative text-left text-sm md:text-base text-white transition-colors duration-300 group-hover:text-teal-400">
                 {t(textKey)}
             </p>
 

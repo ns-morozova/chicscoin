@@ -1,16 +1,24 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useTranslation } from 'react-i18next';
 
 const Navbar: React.FC = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const [currentLanguage, setCurrentLanguage] = useState('en');
     const { t, i18n } = useTranslation();
 
     // Функция для переключения языка
     const changeLanguage = (lng: string) => {
         i18n.changeLanguage(lng);
+    };
+
+    // Обработчик изменения языка
+    const handleLanguageChange = (language: string) => {
+        setCurrentLanguage(language);
+        setIsOpen(false);
+        changeLanguage(language);
     };
 
     return (
@@ -147,7 +155,7 @@ const Navbar: React.FC = () => {
                     </div>
 
                     {/* Переключатель языка в мобильном меню */}
-                    <div className="lang-switcher mt-4">
+                    {/* <div className="lang-switcher mt-4">
                         <select
                             className="selector bg-transparent border border-white rounded p-1 w-full outline-none focus:outline-none"
                             onChange={(e) => changeLanguage(e.target.value)}
@@ -155,6 +163,41 @@ const Navbar: React.FC = () => {
                             <option value="en">EN</option>
                             <option value="ru">RU</option>
                         </select>
+                    </div> */}
+
+                    <div className="absolute top-6 left-6">
+                        <div className="lang-switcher relative w-max">
+                            {/* Кнопка для отображения текущего языка */}
+                            <div className="relative px-0.5">
+                                <button
+                                    className="custom-selector m-0.5 ml-0 bg-[#141414] rounded px-3 w-full text-left outline-none focus:outline-none"
+                                    onClick={() => setIsOpen(!isOpen)}
+                                >
+                                    {currentLanguage === 'en' ? 'EN' : 'RU'}
+                                </button>
+                                <div
+                                    className="absolute inset-0 bg-gradient-to-r from-[#AF0092] to-[#14B8A6] rounded -z-10"
+                                ></div>
+                            </div>
+                            
+                            {/* Выпадающее меню */}
+                            {isOpen && (
+                                <div className="absolute top-full left-0 w-full bg-gradient-to-b from-[#AF0092] to-[#14B8A6] rounded shadow-lg mt-2 py-2 z-10">
+                                    <button
+                                        className="block w-full mb-1 hover:text-gray-100"
+                                        onClick={() => handleLanguageChange('en')}
+                                    >
+                                        EN
+                                    </button>
+                                    <button
+                                        className="block w-full hover:text-gray-100"
+                                        onClick={() => handleLanguageChange('ru')}
+                                    >
+                                        RU
+                                    </button>
+                                </div>
+                            )}
+                        </div>
                     </div>
 
                     <div className="w-32 h-auto mx-auto mt-20 rounded-full overflow-hidden">
