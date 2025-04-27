@@ -30,9 +30,9 @@ const Navbar: React.FC = () => {
                             zIndex: -1,
                         }}
                     ></div>
-                    <div className="relative bg-gray-200/5 backdrop-blur-2xl flex items-center justify-end p-2 sm:p-3 md:p-4 lg:justify-center lg:py-5">
+                    <div className="relative bg-gray-200/5 backdrop-blur-2xl flex items-center justify-end px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-3.5 lg:justify-center lg:py-4.5">
                         {/* Логотип */}
-                        <div className="lg:hidden absolute left-2 sm:left-3 lg:left-2 flex lg:flex-1">
+                        <div className="lg:hidden absolute left-1.5 sm:left-2 flex lg:flex-1">
                             <a href="#" className="-m-1.5 p-1.5">
                                 <span className="sr-only">{t('navbar.logo')}</span>
                                 <div className="w-8 sm:w-10 md:w-11 lg:w-16 h-auto rounded-full overflow-hidden">
@@ -58,28 +58,28 @@ const Navbar: React.FC = () => {
                         </div>
 
                         {/* Десктопное меню */}
-                        <div className="hidden text-xl font-medium text-[#FFE6E6] lg:flex lg:gap-x-14 xl:gap-x-20">
+                        <div className="hidden text-base font-medium text-white lg:flex lg:gap-x-14 xl:gap-x-20">
                             <a
                                 href="#home"
-                                className="hover:text-[#FFB4B4] transition-colors"
+                                className="hover:text-[#FFE6E6] transition-colors"
                             >
                                 {t('navbar.menu.home')}
                             </a>
                             <a
                                 href="#about"
-                                className="hover:text-[#FFB4B4] transition-colors"
+                                className="hover:text-[#FFE6E6] transition-colors"
                             >
                                 {t('navbar.menu.about')}
                             </a>
                             <a
                                 href="#services"
-                                className="hover:text-[#FFB4B4] transition-colors"
+                                className="hover:text-[#FFE6E6] transition-colors"
                             >
                                 {t('navbar.menu.services')}
                             </a>
                             <a
                                 href="#contact"
-                                className="hover:text-[#FFB4B4] transition-colors"
+                                className="hover:text-[#FFE6E6] transition-colors"
                             >
                                 {t('navbar.menu.contact')}
                             </a>
@@ -116,28 +116,28 @@ const Navbar: React.FC = () => {
                     </div>
                     <div className="mt-6 flow-root">
                         <div className="-my-6 divide-y divide-gray-500/25">
-                            <div className="space-y-2 py-6">
+                            <div className="font-medium text-base space-y-2 py-6">
                                 <a
                                     href="#home"
-                                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-gray-800 transition-colors"
+                                    className="-mx-3 block rounded-lg px-3 py-2 text-white hover:bg-gray-800 transition-colors"
                                 >
                                     {t('navbar.menu.home')}
                                 </a>
                                 <a
                                     href="#about"
-                                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-gray-800 transition-colors"
+                                    className="-mx-3 block rounded-lg px-3 py-2 text-white hover:bg-gray-800 transition-colors"
                                 >
                                     {t('navbar.menu.about')}
                                 </a>
                                 <a
                                     href="#services"
-                                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-gray-800 transition-colors"
+                                    className="-mx-3 block rounded-lg px-3 py-2 text-white hover:bg-gray-800 transition-colors"
                                 >
                                     {t('navbar.menu.services')}
                                 </a>
                                 <a
                                     href="#contact"
-                                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-gray-800 transition-colors"
+                                    className="-mx-3 block rounded-lg px-3 py-2 text-white hover:bg-gray-800 transition-colors"
                                 >
                                     {t('navbar.menu.contact')}
                                 </a>
