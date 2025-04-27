@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 interface CardTokenomicsProps {
     number: number;
     textKey: string;
-    type: 'primary' | 'secondary' | 'tertiary';
+    type: 'primary' | 'secondary';
     className?: string;
 }
 
@@ -13,15 +13,11 @@ const CardTokenomics: React.FC<CardTokenomicsProps> = ({ number, textKey, type, 
 
     const cardStyles = {
         primary: {
-            border: '1px solid #FF4FE2',
+            border: '1px solid #AF0092',
             color: '#FFFFFF',
         },
         secondary: {
-            border: '1px solid #FFFFFF',
-            color: '#FFFFFF',
-        },
-        tertiary: {
-            background: '#000000',
+            border: '1px solid rgba(20, 184, 166, 0.7)',
             color: '#FFFFFF',
         },
     };
@@ -30,13 +26,22 @@ const CardTokenomics: React.FC<CardTokenomicsProps> = ({ number, textKey, type, 
 
     return (
         <div
-            className={`relative transition-colors group overflow-hidden rounded-3xl px-4 py-3.5 shadow-lg md:px-8 md:py-5 ${className || ''}`}
+            className={`relative transition-colors group overflow-hidden rounded-3xl px-4 py-3.5 shadow-lg md:px-8 md:py-5
+                ${className || ''}
+                ${
+                    (type === 'primary') ? 'hover:!border-[#72005F]' : 'hover:!border-[#042521]'
+                }
+            `}
             style={{
                 ...selectedStyle,
             }}
         >
             <span
-                className="absolute inset-0 bg-gradient-to-r from-[#FF7475] to-[#BC0F58] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out opacity-50"
+                className={`absolute inset-0 bg-gradient-to-r transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-in-out opacity-50
+                    ${
+                        (type === 'primary') ? 'from-[#AF0092] to-[#BC0F58]' : 'from-[#14b8a6] to-[#115e59]'
+                    }
+                `}
             ></span>
             <div
                 className="relative w-7 h-7 md:w-9 md:h-9 rounded-full border border-white flex items-center justify-center mb-4"

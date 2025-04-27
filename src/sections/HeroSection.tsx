@@ -8,7 +8,7 @@ const HeroSection: React.FC = () => {
         <section className="relative w-full">
             <div className="sm:hidden h-20"></div>
             <div
-                className="relative w-full h-96 bg-bottom-right mb-6 sm:bg-center sm:pt-24 sm:h-[450px] md:h-[650px] md:pt-28 lg:h-[750px] lg:pt-32 xl:h-[850px] 2xl:h-[1000px]"
+                className="relative w-full h-96 bg-bottom-right mb-6 sm:bg-center sm:h-[500px] sm:pt-24 md:h-[650px] md:pt-28 lg:h-[850px] lg:pt-36 xl:h-[1000px] 2xl:h-[1000px]"
                 style={{
                     backgroundImage: "url('/images/banner.JPG')",
                     backgroundSize: 'cover',
@@ -22,7 +22,7 @@ const HeroSection: React.FC = () => {
                     }}
                 >
                 </div>
-                <div className="relative flex flex-col sm:items-center gap-5 px-4 md:gap-7 lg:px-8 z-20">
+                <div className="relative flex flex-col lg:items-center gap-5 px-4 md:gap-7 lg:px-8 z-20">
                     {/* <div className="hidden lg:block w-20 sm:w-24 md:w-28 lg:w-32 xl:w-36 h-auto rounded-full overflow-hidden">
                         <img
                             alt={t('navbar.logo')}
@@ -31,9 +31,9 @@ const HeroSection: React.FC = () => {
                         />
                     </div> */}
 
-                    <div className="w-full flex flex-col gap-2 sm:items-center sm:gap-3 md:gap-0">
+                    <div className="w-full flex flex-col gap-2 lg:items-center lg:gap-3 md:gap-0">
                         <h1
-                            className="font-audiowide font-bold sm:text-center uppercase text-nowrap text-3xl md:text-6xl lg:text-7xl"
+                            className="font-audiowide font-bold lg:text-center uppercase text-nowrap text-3xl md:text-6xl lg:text-7xl"
                             style={{
                                 background: 'linear-gradient(90deg, #AF0092, #14B8A6)',
                                 WebkitBackgroundClip: 'text',
@@ -43,7 +43,7 @@ const HeroSection: React.FC = () => {
                         >
                             {t('hero.title')}
                         </h1>
-                        <p className="text-white sm:text-center text-sm w-1/2 sm:w-1/3 md:w-1/4 md:text-base">
+                        <p className="text-white lg:text-center text-sm w-1/2 sm:w-1/3 md:w-1/4 md:text-base">
                             {t('hero.description')}
                         </p>
                     </div>

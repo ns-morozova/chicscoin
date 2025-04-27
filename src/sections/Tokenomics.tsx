@@ -9,7 +9,7 @@ const Tokenomics: React.FC = () => {
         <section className="px-4 py-8 lg:px-8 md:py-16">
             
             <div className="relative max-w-7xl mx-auto z-50">
-                <h2 className="mb-5 md:mb-10 lg:mb-12 text-white text-center text-2xl md:text-5xl">
+                <h2 className="mb-5 md:mb-10 lg:mb-12 font-medium text-white text-center uppercase text-2xl md:text-5xl">
                     {t('tokenomics.title')}
                 </h2>
 
