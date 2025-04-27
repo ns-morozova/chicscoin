@@ -8,7 +8,7 @@ const HeroSection: React.FC = () => {
         <section className="relative w-full">
             <div className="sm:hidden h-32"></div>
             <div
-                className="relative w-full h-[500px] bg-bottom-right pt-2 sm:bg-center sm:h-[600px] sm:pt-24 md:h-[700px] md:pt-28 lg:h-[850px] lg:pt-36 xl:h-[1000px] 2xl:h-[1000px]"
+                className="relative w-full max-w-7xl mx-auto h-[500px] bg-bottom-right pt-2 sm:bg-center sm:h-[600px] sm:pt-24 md:h-[700px] md:pt-28 lg:h-[850px] lg:pt-36 xl:h-[1000px] 2xl:h-[1000px]"
                 style={{
                     backgroundImage: "url('/images/banner.JPG')",
                     backgroundSize: 'cover',
