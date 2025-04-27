@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
 
     return (
         <header className="fixed top-0 left-0 w-full z-50">
-            {/* Центрированный контейнер для десктопной версии */}
+            {/* Центрированный контейнер для десктопа */}
             <div className="mx-auto max-w-7xl px-4 lg:px-8">
                 <nav
                     aria-label="Global"
@@ -25,20 +25,21 @@ const Navbar: React.FC = () => {
                         style={{
                             position: 'absolute',
                             inset: 0,
-                            background: 'linear-gradient(90deg, #1B0643, #8F0050, #BC0F58, #E7005B, #FF6068, #FF7475)',
-                            opacity: 0.7,
+                            background: 'linear-gradient(90deg, #AF0092, #14B8A6)',
+                            opacity: 1,
                             zIndex: -1,
                         }}
                     ></div>
-                    <div className="relative bg-gray-200/5 backdrop-blur-2xl flex items-center justify-end px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-3.5 lg:justify-center lg:py-4.5">
+
+                    <div className="relative flex items-center justify-end px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-3.5 lg:justify-center lg:py-4.5">
                         {/* Логотип */}
-                        <div className="lg:hidden absolute left-1.5 sm:left-2 flex lg:flex-1">
+                        <div className="absolute left-1.5 flex lg:flex-1">
                             <a href="#" className="-m-1.5 p-1.5">
                                 <span className="sr-only">{t('navbar.logo')}</span>
-                                <div className="w-8 sm:w-10 md:w-11 lg:w-16 h-auto rounded-full overflow-hidden">
+                                <div className="w-8 sm:w-10 md:w-11 lg:w-13 h-auto rounded-full overflow-hidden">
                                     <img
                                         alt={t('navbar.logo')}
-                                        src="/images/chiks-coin.png"
+                                        src="/images/chiks-coin2.png"
                                         className="w-full h-auto object-cover"
                                     />
                                 </div>
@@ -159,7 +160,7 @@ const Navbar: React.FC = () => {
                     <div className="w-32 h-auto mx-auto mt-20 rounded-full overflow-hidden">
                         <img
                             alt={t('navbar.logo')}
-                            src="/images/chiks-coin.png"
+                            src="/images/chiks-coin2.png"
                             className="w-full h-auto object-cover"
                         />
                     </div>

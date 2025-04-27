@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar } from '../marketing';
-import { HeroSection, Ideology } from '../sections';
+import { HeroSection, Ideology, Tokenomics } from '../sections';
 
 const Home: React.FC = () => {
     return (
@@ -8,6 +8,7 @@ const Home: React.FC = () => {
             <Navbar />
             <HeroSection />
             <Ideology />
+            <Tokenomics />
         </div>
     );
 };
