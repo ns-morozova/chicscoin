@@ -8,7 +8,7 @@ const HeroSection: React.FC = () => {
         <section className="relative w-full">
             <div className="sm:hidden h-20"></div>
             <div
-                className="relative w-full h-96 bg-bottom-right mb-6 sm:bg-center sm:h-[500px] sm:pt-24 md:h-[650px] md:pt-28 lg:h-[850px] lg:pt-36 xl:h-[1000px] 2xl:h-[1000px]"
+                className="relative w-full h-96 bg-bottom-right pt-2 sm:bg-center sm:h-[500px] sm:pt-24 md:h-[650px] md:pt-28 lg:h-[850px] lg:pt-36 xl:h-[1000px] 2xl:h-[1000px]"
                 style={{
                     backgroundImage: "url('/images/banner.JPG')",
                     backgroundSize: 'cover',
@@ -31,7 +31,7 @@ const HeroSection: React.FC = () => {
                         />
                     </div> */}
 
-                    <div className="w-full flex flex-col gap-2 lg:items-center lg:gap-3 md:gap-0">
+                    <div className="w-full flex flex-col gap-2 lg:items-center lg:gap-3">
                         <h1
                             className="font-audiowide font-bold lg:text-center uppercase text-nowrap text-3xl md:text-6xl lg:text-7xl"
                             style={{
@@ -43,7 +43,7 @@ const HeroSection: React.FC = () => {
                         >
                             {t('hero.title')}
                         </h1>
-                        <p className="text-white lg:text-center text-sm w-1/2 sm:w-1/3 md:w-1/4 md:text-base">
+                        <p className="lg:text-center text-sm w-1/2 sm:w-1/3 md:w-1/4 md:text-base">
                             {t('hero.description')}
                         </p>
                     </div>

@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
                             <button
                                 type="button"
                                 onClick={() => setMobileMenuOpen(true)}
-                                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
+                                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
                             >
                                 <span className="sr-only">Open main menu</span>
                                 <Bars3Icon aria-hidden="true" className="size-6" />
@@ -59,7 +59,7 @@ const Navbar: React.FC = () => {
                         </div>
 
                         {/* Десктопное меню */}
-                        <div className="hidden text-base font-medium text-white lg:flex lg:gap-x-14 xl:gap-x-20">
+                        <div className="hidden text-base font-medium lg:flex lg:gap-x-14 xl:gap-x-20">
                             <a
                                 href="#home"
                                 className="hover:text-[#FFE6E6] transition-colors"
@@ -89,7 +89,7 @@ const Navbar: React.FC = () => {
                         {/* Переключатель языка */}
                         <div className="lang-switcher pr-2 transition-colors duration-300 hidden lg:block lg:absolute lg:right-6 lg:top-1/2 lg:-translate-y-1/2">
                             <select
-                                className="selector bg-transparent text-white p-1.5 outline-none cursor-pointer"
+                                className="selector bg-transparent p-1.5 outline-none cursor-pointer"
                                 onChange={(e) => changeLanguage(e.target.value)}
                             >
                                 <option value="en">EN</option>
@@ -109,7 +109,7 @@ const Navbar: React.FC = () => {
                         <button
                             type="button"
                             onClick={() => setMobileMenuOpen(false)}
-                            className="-m-2.5 rounded-md p-2.5 text-white"
+                            className="-m-2.5 rounded-md p-2.5"
                         >
                             <span className="sr-only">Close menu</span>
                             <XMarkIcon aria-hidden="true" className="size-6" />
@@ -120,25 +120,25 @@ const Navbar: React.FC = () => {
                             <div className="font-medium text-base space-y-2 py-6">
                                 <a
                                     href="#home"
-                                    className="-mx-3 block rounded-lg px-3 py-2 text-white hover:bg-gray-800 transition-colors"
+                                    className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-800 transition-colors"
                                 >
                                     {t('navbar.menu.home')}
                                 </a>
                                 <a
                                     href="#about"
-                                    className="-mx-3 block rounded-lg px-3 py-2 text-white hover:bg-gray-800 transition-colors"
+                                    className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-800 transition-colors"
                                 >
                                     {t('navbar.menu.about')}
                                 </a>
                                 <a
                                     href="#services"
-                                    className="-mx-3 block rounded-lg px-3 py-2 text-white hover:bg-gray-800 transition-colors"
+                                    className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-800 transition-colors"
                                 >
                                     {t('navbar.menu.services')}
                                 </a>
                                 <a
                                     href="#contact"
-                                    className="-mx-3 block rounded-lg px-3 py-2 text-white hover:bg-gray-800 transition-colors"
+                                    className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-800 transition-colors"
                                 >
                                     {t('navbar.menu.contact')}
                                 </a>
@@ -149,7 +149,7 @@ const Navbar: React.FC = () => {
                     {/* Переключатель языка в мобильном меню */}
                     <div className="lang-switcher mt-4">
                         <select
-                            className="selector bg-transparent text-white border border-white rounded p-1 w-full outline-none focus:outline-none"
+                            className="selector bg-transparent border border-white rounded p-1 w-full outline-none focus:outline-none"
                             onChange={(e) => changeLanguage(e.target.value)}
                         >
                             <option value="en">EN</option>

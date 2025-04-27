@@ -14,16 +14,24 @@
         "button": "Learn more"
     },
     "ideology": {
-        "title": "Ideology"
+        "title": "Ideology",
+        "description": "CHICS — cryptocurrency for gamers and streamers",
+        "toolDescription": "A convenient tool for gamers to interact with popular female streamers"
     },
     "tokenomics": {
         "title": "Tokenomics"
     },
     "cardtokenomics": {
         "emission": "Emission of 1 billion CHICS, 50% for developers and pre-seed investors, 50% on the open market",
-        "volume": "70% of the developers' coin volume is frozen until the end of 2025.",
-        "marketing": "30% is allocated for marketing and promotion in the crypto community.",
-        "voting": "Key decisions are made through open community voting.",
-        "mining": "GPU mining launch upon reaching a market cap of $10 million."
+        "volume": "70% of the developers' coin volume is frozen until the end of 2025",
+        "marketing": "30% is allocated for marketing and promotion in the crypto community",
+        "voting": "Key decisions are made through open community voting",
+        "mining": "GPU mining launch upon reaching a market cap of $10 million"
+    },
+    "cardideology": {
+        "translations": "Organization of translations",
+        "expressions": "Expression of sympathy",
+        "matches": "Joint matches",
+        "purchases": "In-game purchases"
     }
 }
