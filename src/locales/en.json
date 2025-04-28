@@ -33,5 +33,9 @@
         "expressions": "Expression of sympathy",
         "matches": "Joint matches",
         "purchases": "In-game purchases"
+    },
+    "footer": {
+        "title": "chics coin",
+        "copyright": "© 2023 CHICS Coin. All rights reserved."
     }
 }

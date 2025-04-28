@@ -33,5 +33,9 @@
         "expressions": "Выражение симпатий",
         "matches": "Совместные матчи",
         "purchases": "Внутриигровые покупки"
+    },
+    "footer": {
+        "title": "chics coin",
+        "copyright": "© 2023 CHICS Coin. Все права защищены."
     }
 }

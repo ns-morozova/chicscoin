@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar } from '../marketing';
+import { Navbar, Footer } from '../marketing';
 import { HeroSection, Ideology, Tokenomics } from '../sections';
 
 const Home: React.FC = () => {
@@ -9,6 +9,7 @@ const Home: React.FC = () => {
             <HeroSection />
             <Ideology />
             <Tokenomics />
+            <Footer />
         </div>
     );
 };
