@@ -29,15 +29,7 @@ const HeroSection: React.FC = () => {
                     }}
                 >
                 </div>
-                <div className="-mt-12 lg:-mt-14 xl:-mt-4 relative flex flex-col items-center gap-5 px-4 md:gap-7 lg:px-8 z-20">
-                    {/* <div className="hidden lg:block w-20 sm:w-24 md:w-28 lg:w-32 xl:w-36 h-auto rounded-full overflow-hidden">
-                        <img
-                            alt={t('navbar.logo')}
-                            src="/images/chiks-coin2.png"
-                            className="w-full h-auto object-cover"
-                        />
-                    </div> */}
-
+                <div className="-mt-8 lg:-mt-14 xl:-mt-4 relative flex flex-col items-center gap-5 px-4 md:gap-7 lg:px-8 z-20">
                     <div className="w-full flex flex-col gap-2 items-center lg:gap-3">
                         <h1
                             className="font-audiowide font-bold text-center uppercase text-nowrap text-3xl md:text-6xl lg:text-7xl"

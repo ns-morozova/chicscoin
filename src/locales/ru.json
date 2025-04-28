@@ -21,6 +21,9 @@
     "tokenomics": {
         "title": "Токеномика"
     },
+    "apps": {
+        "availableOn": "Доступно в App Store и Google Play"
+    },
     "cardtokenomics": {
         "emission": "Эмиссия 1 млрд CHICS, из которых 50% — у девелоперов и pre-seed инвесторов, 50% — на открытом рынке",
         "volume": "70% объёма монет разработчиков замораживается до конца 2025 года",

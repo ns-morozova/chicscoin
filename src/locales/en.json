@@ -21,6 +21,9 @@
     "tokenomics": {
         "title": "Tokenomics"
     },
+    "apps": {
+        "availableOn": "Available on App Store and Google Play"
+    },
     "cardtokenomics": {
         "emission": "Emission of 1 billion CHICS, 50% for developers and pre-seed investors, 50% on the open market",
         "volume": "70% of the developers' coin volume is frozen until the end of 2025",

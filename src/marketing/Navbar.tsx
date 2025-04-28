@@ -44,9 +44,9 @@ const Navbar: React.FC = () => {
     }, []);
 
     return (
-        <header className="fixed top-0 left-0 w-full z-50">
+        <header className="fixed top-0 left-0 w-full px-4 lg:px-8 z-50">
             {/* Центрированный контейнер для десктопа */}
-            <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
+            <div className="relative mx-auto max-w-7xl">
                 <nav
                     aria-label="Global"
                     className="relative mx-auto mt-4 rounded-full shadow-lg lg:mt-6 overflow-hidden"
@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
                         }}
                     ></div>
 
-                    <div className="relative flex items-center justify-end px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-3.5 lg:justify-center lg:py-4.5">
+                    <div className="relative flex items-center justify-end px-3 py-3 sm:px-4 sm:py-3 md:px-5 md:py-3.5 lg:justify-center lg:py-4.5">
                         {/* Логотип */}
                         <div className="absolute left-1.5 flex lg:flex-1">
                             <Link
@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
                                 className="-m-1.5 p-1.5 cursor-pointer"
                             >
                                 <span className="sr-only">{t('navbar.logo')}</span>
-                                <div className="w-8 sm:w-10 md:w-11 lg:w-13 h-auto rounded-full overflow-hidden">
+                                <div className="w-10 md:w-11 lg:w-13 h-auto rounded-full overflow-hidden">
                                     <img
                                         alt={t('navbar.logo')}
                                         src="/images/chiks-coin2.png"
@@ -252,7 +252,7 @@ const Navbar: React.FC = () => {
 
                     {/* Переключатель языка в мобильном меню */}
 
-                    <div className="absolute top-6 left-6">
+                    <div className="absolute bottom-6 left-6">
                         <div className="lang-switcher relative w-max">
                             <div className="relative px-0.5">
                                 <button
@@ -267,7 +267,7 @@ const Navbar: React.FC = () => {
                             </div>
                             
                             {isOpen && (
-                                <div className="absolute top-full left-0 w-full bg-gradient-to-b from-[#AF0092] to-[#14B8A6] rounded shadow-lg mt-2 py-2 z-10">
+                                <div className="absolute bottom-full left-0 w-full bg-gradient-to-b from-[#AF0092] to-[#14B8A6] rounded shadow-lg mb-2 py-2 z-10">
                                     <button
                                         className="block w-full mb-1 hover:text-gray-100"
                                         onClick={() => handleLanguageChange('en')}
