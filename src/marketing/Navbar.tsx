@@ -64,7 +64,12 @@ const Navbar: React.FC = () => {
                     <div className="relative flex items-center justify-end px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-3.5 lg:justify-center lg:py-4.5">
                         {/* Логотип */}
                         <div className="absolute left-1.5 flex lg:flex-1">
-                            <a href="#" className="-m-1.5 p-1.5">
+                            <Link
+                                to="home"
+                                smooth={true}
+                                duration={600}
+                                className="-m-1.5 p-1.5 cursor-pointer"
+                            >
                                 <span className="sr-only">{t('navbar.logo')}</span>
                                 <div className="w-8 sm:w-10 md:w-11 lg:w-13 h-auto rounded-full overflow-hidden">
                                     <img
@@ -73,7 +78,18 @@ const Navbar: React.FC = () => {
                                         className="w-full h-auto object-cover"
                                     />
                                 </div>
-                            </a>
+                            </Link>
+
+                            {/* <a href="#" className="-m-1.5 p-1.5">
+                                <span className="sr-only">{t('navbar.logo')}</span>
+                                <div className="w-8 sm:w-10 md:w-11 lg:w-13 h-auto rounded-full overflow-hidden">
+                                    <img
+                                        alt={t('navbar.logo')}
+                                        src="/images/chiks-coin2.png"
+                                        className="w-full h-auto object-cover"
+                                    />
+                                </div>
+                            </a> */}
                         </div>
 
                         {/* Кнопка для мобильного меню */}
@@ -125,31 +141,6 @@ const Navbar: React.FC = () => {
                             >
                                 {t('navbar.menu.social')}
                             </Link>
-
-                            {/* <a
-                                href="#home"
-                                className="hover:text-[#FFE6E6] transition-colors"
-                            >
-                                {t('navbar.menu.ideology')}
-                            </a>
-                            <a
-                                href="#about"
-                                className="hover:text-[#FFE6E6] transition-colors"
-                            >
-                                {t('navbar.menu.tokenomics')}
-                            </a>
-                            <a
-                                href="#services"
-                                className="hover:text-[#FFE6E6] transition-colors"
-                            >
-                                {t('navbar.menu.roadmap')}
-                            </a>
-                            <a
-                                href="#contact"
-                                className="hover:text-[#FFE6E6] transition-colors"
-                            >
-                                {t('navbar.menu.social')}
-                            </a> */}
                         </div>
                     </div>
                     
@@ -255,30 +246,6 @@ const Navbar: React.FC = () => {
                                 >
                                     {t('navbar.menu.social')}
                                 </Link>
-                                {/* <a
-                                    href="#home"
-                                    className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-800 transition-colors cursor-pointer"
-                                >
-                                    {t('navbar.menu.home')}
-                                </a>
-                                <a
-                                    href="#about"
-                                    className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-800 transition-colors"
-                                >
-                                    {t('navbar.menu.about')}
-                                </a>
-                                <a
-                                    href="#services"
-                                    className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-800 transition-colors"
-                                >
-                                    {t('navbar.menu.services')}
-                                </a>
-                                <a
-                                    href="#contact"
-                                    className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-800 transition-colors"
-                                >
-                                    {t('navbar.menu.contact')}
-                                </a> */}
                             </div>
                         </div>
                     </div>

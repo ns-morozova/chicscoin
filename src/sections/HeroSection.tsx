@@ -5,7 +5,7 @@ import { Button } from '../components/Button';
 const HeroSection: React.FC = () => {
     const { t } = useTranslation();
     return (
-        <section className="relative w-full">
+        <section id="home" className="relative w-full">
             <div className="h-32 sm:h-14 xl:h-6"></div>
             <div
                 className="relative w-full max-w-7xl mx-auto h-[500px] bg-bottom-right pt-2 sm:bg-center sm:h-[550px] sm:pt-24 md:h-[600px] md:pt-28 lg:h-[750px] lg:pt-36 xl:h-[850px]"
