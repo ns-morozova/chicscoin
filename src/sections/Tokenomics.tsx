@@ -50,13 +50,13 @@ const Tokenomics: React.FC = () => {
                     />
                 </div>
 
-                <div
+                {/* <div
                     className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-full h-full -z-10"
                     style={{
                         background: 'radial-gradient(circle, rgba(193, 0, 161, 0.5), rgba(48, 101, 125, 0.5))',
                         filter: 'blur(150px)',
                     }}
-                ></div>
+                ></div> */}
 
             </div>
         </section>

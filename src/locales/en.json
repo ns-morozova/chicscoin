@@ -21,8 +21,17 @@
     "tokenomics": {
         "title": "Tokenomics"
     },
+    "roadmap": {
+        "title": "Roadmap"
+    },
     "apps": {
         "availableOn": "Available on App Store and Google Play"
+    },
+    "cardideology": {
+        "translations": "Organization of translations",
+        "expressions": "Expression of sympathy",
+        "matches": "Joint matches",
+        "purchases": "In-game purchases"
     },
     "cardtokenomics": {
         "emission": "Emission of 1 billion CHICS, 50% for developers and pre-seed investors, 50% on the open market",
@@ -31,11 +40,23 @@
         "voting": "Key decisions are made through open community voting",
         "mining": "GPU mining launch upon reaching a market cap of $10 million"
     },
-    "cardideology": {
-        "translations": "Organization of translations",
-        "expressions": "Expression of sympathy",
-        "matches": "Joint matches",
-        "purchases": "In-game purchases"
+    "cardroadmap": {
+        "concept": {
+            "title": "Concept Development",
+            "description": "Formation of an experienced team of developers and marketers, creation of an active community, attraction of first investors, launch and support of social networks and media platforms."
+        },
+        "start": {
+            "title": "Project Launch",
+            "description": "Presale on the Blum memepad (TON network) followed by listing on DEX platforms, active marketing in thematic groups, attraction of female ambassadors, conducting broadcasts and first joint matches."
+        },
+        "integration": {
+            "title": "Integration and Scaling",
+            "description": "Development of a cross-platform application (iOS, Android, TMA) for participating in matches (CS2, Dota, WoT, etc.) with streamers. Listing on Xeggex, MEXC, and Tier-1 exchanges. Integration with FaceIT, FastCup."
+        },
+        "contests": {
+            "title": "International Competitions",
+            "description": "Organization of tournaments among female streamers (CS2, Dota, FIFA, WoT) supported by CHICS with coverage in major media."
+        }
     },
     "footer": {
         "title": "chics coin",

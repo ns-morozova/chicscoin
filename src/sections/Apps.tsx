@@ -5,7 +5,7 @@ const Apps: React.FC = () => {
     const { t } = useTranslation();
 
     return (
-        <section id="apps" className="px-4 py-8 lg:px-8 md:py-16">
+        <section id="social" className="px-4 py-8 lg:px-8 md:py-16">
             <div
                 className="relative max-w-7xl mx-auto py-20 bg-top-left sm:py-28 md:py-36 md:bg-center"
                 style={{

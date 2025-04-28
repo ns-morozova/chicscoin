@@ -148,7 +148,7 @@ const Navbar: React.FC = () => {
                 
                 {/* Переключатель языка */}
                 <div
-                    className="lang-switcher pr-2 transition-colors duration-300 hidden lg:block lg:absolute lg:right-12 lg:top-1/2 lg:-translate-y-1/2"
+                    className="lang-switcher pr-2 transition-colors duration-300 hidden lg:block lg:absolute lg:right-4 lg:top-1/2 lg:-translate-y-1/2"
                     ref={dropdownRef}
                 >
                     <div className="lang-switcher relative w-max">
