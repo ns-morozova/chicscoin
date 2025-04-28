@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useTranslation } from 'react-i18next';
@@ -8,6 +8,9 @@ const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [currentLanguage, setCurrentLanguage] = useState('en');
     const { t, i18n } = useTranslation();
+
+    // Ссылка на выпадающее меню
+    const dropdownRef = useRef<HTMLDivElement>(null);
 
     // Функция для переключения языка
     const changeLanguage = (lng: string) => {
@@ -21,10 +24,28 @@ const Navbar: React.FC = () => {
         changeLanguage(language);
     };
 
+    // Закрытие выпадающего меню при клике вне его
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (
+                dropdownRef.current &&
+                !dropdownRef.current.contains(event.target as Node)
+            ) {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener('click', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, []);
+
     return (
         <header className="fixed top-0 left-0 w-full z-50">
             {/* Центрированный контейнер для десктопа */}
-            <div className="mx-auto max-w-7xl px-4 lg:px-8">
+            <div className="relative mx-auto max-w-7xl px-4 lg:px-8">
                 <nav
                     aria-label="Global"
                     className="relative mx-auto mt-4 rounded-full shadow-lg lg:mt-6 overflow-hidden"
@@ -95,7 +116,7 @@ const Navbar: React.FC = () => {
                         </div>
 
                         {/* Переключатель языка */}
-                        <div className="lang-switcher pr-2 transition-colors duration-300 hidden lg:block lg:absolute lg:right-6 lg:top-1/2 lg:-translate-y-1/2">
+                        {/* <div className="lang-switcher pr-2 transition-colors duration-300 hidden lg:block lg:absolute lg:right-6 lg:top-1/2 lg:-translate-y-1/2">
                             <select
                                 className="selector bg-transparent p-1.5 outline-none cursor-pointer"
                                 onChange={(e) => changeLanguage(e.target.value)}
@@ -103,10 +124,59 @@ const Navbar: React.FC = () => {
                                 <option value="en">EN</option>
                                 <option value="ru">RU</option>
                             </select>
-                        </div>
+                        </div> */}
+
+                        
+
                     </div>
                     
                 </nav>
+                
+                {/* Переключатель языка */}
+                <div
+                    className="lang-switcher pr-2 transition-colors duration-300 hidden lg:block lg:absolute lg:right-12 lg:top-1/2 lg:-translate-y-1/2"
+                    ref={dropdownRef} // Привязываем ссылку к контейнеру
+                >
+                    <div className="lang-switcher relative w-max">
+                        <div className="relative px-0.5">
+                            <button
+                                className="custom-selector m-0.5 ml-0 bg-[#141414] rounded px-3 w-full text-left outline-none focus:outline-none"
+                                onClick={(e) => {
+                                    e.stopPropagation(); // Предотвращаем закрытие при клике на кнопку
+                                    setIsOpen(!isOpen);
+                                }}
+                            >
+                                {currentLanguage === 'en' ? 'EN' : 'RU'}
+                            </button>
+                            <div
+                                className="absolute inset-0 bg-gradient-to-r from-[#AF0092] to-teal-900 rounded -z-10"
+                            ></div>
+                        </div>
+                        {/* Выпадающее меню */}
+                        {isOpen && (
+                            <div className="absolute top-full right-0 w-20 bg-white rounded shadow-lg mt-2 py-2">
+                                <button
+                                    className="block w-full mb-1 text-black hover:text-teal-700 text-center"
+                                    onClick={(e) => {
+                                        e.stopPropagation(); // Предотвращаем закрытие при клике на элемент
+                                        handleLanguageChange('en');
+                                    }}
+                                >
+                                    EN
+                                </button>
+                                <button
+                                    className="block w-full text-black hover:text-teal-700 text-center"
+                                    onClick={(e) => {
+                                        e.stopPropagation(); // Предотвращаем закрытие при клике на элемент
+                                        handleLanguageChange('ru');
+                                    }}
+                                >
+                                    RU
+                                </button>
+                            </div>
+                        )}
+                    </div>
+                </div>
             </div>
 
             {/* Мобильное меню */}
@@ -155,22 +225,12 @@ const Navbar: React.FC = () => {
                     </div>
 
                     {/* Переключатель языка в мобильном меню */}
-                    {/* <div className="lang-switcher mt-4">
-                        <select
-                            className="selector bg-transparent border border-white rounded p-1 w-full outline-none focus:outline-none"
-                            onChange={(e) => changeLanguage(e.target.value)}
-                        >
-                            <option value="en">EN</option>
-                            <option value="ru">RU</option>
-                        </select>
-                    </div> */}
 
                     <div className="absolute top-6 left-6">
                         <div className="lang-switcher relative w-max">
-                            {/* Кнопка для отображения текущего языка */}
                             <div className="relative px-0.5">
                                 <button
-                                    className="custom-selector m-0.5 ml-0 bg-[#141414] rounded px-3 w-full text-left outline-none focus:outline-none"
+                                    className="custom-selector m-0.5 ml-0 bg-[#141414] rounded px-5 w-full text-left outline-none focus:outline-none"
                                     onClick={() => setIsOpen(!isOpen)}
                                 >
                                     {currentLanguage === 'en' ? 'EN' : 'RU'}
@@ -180,7 +240,6 @@ const Navbar: React.FC = () => {
                                 ></div>
                             </div>
                             
-                            {/* Выпадающее меню */}
                             {isOpen && (
                                 <div className="absolute top-full left-0 w-full bg-gradient-to-b from-[#AF0092] to-[#14B8A6] rounded shadow-lg mt-2 py-2 z-10">
                                     <button
