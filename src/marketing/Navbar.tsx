@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-scroll';
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useTranslation } from 'react-i18next';
@@ -89,45 +90,67 @@ const Navbar: React.FC = () => {
 
                         {/* Десктопное меню */}
                         <div className="hidden text-base font-medium lg:flex lg:gap-x-14 xl:gap-x-20">
-                            <a
+                            <Link
+                                to="ideology"
+                                smooth={true}
+                                duration={600}
+                                className="hover:text-[#FFE6E6] transition-colors cursor-pointer"
+                            >
+                                {t('navbar.menu.ideology')}
+                            </Link>
+
+                            <Link
+                                to="tokenomics"
+                                smooth={true}
+                                duration={600}
+                                className="hover:text-[#FFE6E6] transition-colors cursor-pointer"
+                            >
+                                {t('navbar.menu.tokenomics')}
+                            </Link>
+
+                            <Link
+                                to="roadmap"
+                                smooth={true}
+                                duration={600}
+                                className="hover:text-[#FFE6E6] transition-colors cursor-pointer"
+                            >
+                                {t('navbar.menu.roadmap')}
+                            </Link>
+
+                            <Link
+                                to="social"
+                                smooth={true}
+                                duration={600}
+                                className="hover:text-[#FFE6E6] transition-colors cursor-pointer"
+                            >
+                                {t('navbar.menu.social')}
+                            </Link>
+
+                            {/* <a
                                 href="#home"
                                 className="hover:text-[#FFE6E6] transition-colors"
                             >
-                                {t('navbar.menu.home')}
+                                {t('navbar.menu.ideology')}
                             </a>
                             <a
                                 href="#about"
                                 className="hover:text-[#FFE6E6] transition-colors"
                             >
-                                {t('navbar.menu.about')}
+                                {t('navbar.menu.tokenomics')}
                             </a>
                             <a
                                 href="#services"
                                 className="hover:text-[#FFE6E6] transition-colors"
                             >
-                                {t('navbar.menu.services')}
+                                {t('navbar.menu.roadmap')}
                             </a>
                             <a
                                 href="#contact"
                                 className="hover:text-[#FFE6E6] transition-colors"
                             >
-                                {t('navbar.menu.contact')}
-                            </a>
+                                {t('navbar.menu.social')}
+                            </a> */}
                         </div>
-
-                        {/* Переключатель языка */}
-                        {/* <div className="lang-switcher pr-2 transition-colors duration-300 hidden lg:block lg:absolute lg:right-6 lg:top-1/2 lg:-translate-y-1/2">
-                            <select
-                                className="selector bg-transparent p-1.5 outline-none cursor-pointer"
-                                onChange={(e) => changeLanguage(e.target.value)}
-                            >
-                                <option value="en">EN</option>
-                                <option value="ru">RU</option>
-                            </select>
-                        </div> */}
-
-                        
-
                     </div>
                     
                 </nav>
@@ -135,14 +158,14 @@ const Navbar: React.FC = () => {
                 {/* Переключатель языка */}
                 <div
                     className="lang-switcher pr-2 transition-colors duration-300 hidden lg:block lg:absolute lg:right-12 lg:top-1/2 lg:-translate-y-1/2"
-                    ref={dropdownRef} // Привязываем ссылку к контейнеру
+                    ref={dropdownRef}
                 >
                     <div className="lang-switcher relative w-max">
                         <div className="relative px-0.5">
                             <button
                                 className="custom-selector m-0.5 ml-0 bg-[#141414] rounded px-3 w-full text-left outline-none focus:outline-none"
                                 onClick={(e) => {
-                                    e.stopPropagation(); // Предотвращаем закрытие при клике на кнопку
+                                    e.stopPropagation();
                                     setIsOpen(!isOpen);
                                 }}
                             >
@@ -158,7 +181,7 @@ const Navbar: React.FC = () => {
                                 <button
                                     className="block w-full mb-1 text-black hover:text-teal-700 text-center"
                                     onClick={(e) => {
-                                        e.stopPropagation(); // Предотвращаем закрытие при клике на элемент
+                                        e.stopPropagation();
                                         handleLanguageChange('en');
                                     }}
                                 >
@@ -167,7 +190,7 @@ const Navbar: React.FC = () => {
                                 <button
                                     className="block w-full text-black hover:text-teal-700 text-center"
                                     onClick={(e) => {
-                                        e.stopPropagation(); // Предотвращаем закрытие при клике на элемент
+                                        e.stopPropagation();
                                         handleLanguageChange('ru');
                                     }}
                                 >
@@ -196,9 +219,45 @@ const Navbar: React.FC = () => {
                     <div className="mt-6 flow-root">
                         <div className="-my-6 divide-y divide-gray-500/25">
                             <div className="font-medium text-base space-y-2 py-6">
-                                <a
+                                <Link
+                                    to="ideology"
+                                    smooth={true}
+                                    duration={600}
+                                    className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-800 transition-colors cursor-pointer"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    {t('navbar.menu.ideology')}
+                                </Link>
+                                <Link
+                                    to="tokenomics"
+                                    smooth={true}
+                                    duration={600}
+                                    className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-800 transition-colors cursor-pointer"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    {t('navbar.menu.tokenomics')}
+                                </Link>
+                                <Link
+                                    to="roadmap"
+                                    smooth={true}
+                                    duration={600}
+                                    className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-800 transition-colors cursor-pointer"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    {t('navbar.menu.roadmap')}
+                                </Link>
+                                <Link
+                                    to="social"
+                                    smooth={true}
+                                    duration={600}
+                                    className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-800 transition-colors cursor-pointer"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    {t('navbar.menu.social')}
+                                </Link>
+                                {/* <a
                                     href="#home"
-                                    className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-800 transition-colors"
+                                    className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-800 transition-colors cursor-pointer"
                                 >
                                     {t('navbar.menu.home')}
                                 </a>
@@ -219,7 +278,7 @@ const Navbar: React.FC = () => {
                                     className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-800 transition-colors"
                                 >
                                     {t('navbar.menu.contact')}
-                                </a>
+                                </a> */}
                             </div>
                         </div>
                     </div>

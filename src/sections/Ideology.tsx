@@ -30,7 +30,7 @@ const Ideology: React.FC = () => {
     ];
 
     return (
-        <section className="px-4 pb-8 lg:px-8 md:pt-8 md:pb-16">
+        <section id="ideology" className="px-4 pb-8 lg:px-8 md:pt-8 md:pb-16">
 
             <div className="max-w-7xl mx-auto">
                 {/* <div className="lg:hidden mx-auto mb-12 w-20 sm:w-24 md:w-28 h-auto rounded-full overflow-hidden">
