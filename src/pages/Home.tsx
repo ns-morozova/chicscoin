@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Footer } from '../marketing';
-import { HeroSection, Ideology, Tokenomics, Invitation, Roadmap, Apps } from '../sections';
+import { HeroSection, Ideology, Tokenomics, Invitation, Roadmap, Apps, Social } from '../sections';
 
 const Home: React.FC = () => {
     return (
@@ -12,6 +12,7 @@ const Home: React.FC = () => {
             <Invitation />
             <Roadmap />
             <Apps />
+            <Social />
             <Footer />
         </div>
     );
