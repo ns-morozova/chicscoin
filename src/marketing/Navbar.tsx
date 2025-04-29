@@ -10,6 +10,13 @@ const Navbar: React.FC = () => {
     const [currentLanguage, setCurrentLanguage] = useState('en');
     const { t, i18n } = useTranslation();
 
+    const menuItems = [
+        { to: "ideology", label: t('navbar.menu.ideology') },
+        { to: "tokenomics", label: t('navbar.menu.tokenomics') },
+        { to: "roadmap", label: t('navbar.menu.roadmap') },
+        { to: "social", label: t('navbar.menu.social') },
+    ];
+
     // Ссылка на выпадающее меню
     const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -79,17 +86,6 @@ const Navbar: React.FC = () => {
                                     />
                                 </div>
                             </Link>
-
-                            {/* <a href="#" className="-m-1.5 p-1.5">
-                                <span className="sr-only">{t('navbar.logo')}</span>
-                                <div className="w-8 sm:w-10 md:w-11 lg:w-13 h-auto rounded-full overflow-hidden">
-                                    <img
-                                        alt={t('navbar.logo')}
-                                        src="/images/chiks-coin2.png"
-                                        className="w-full h-auto object-cover"
-                                    />
-                                </div>
-                            </a> */}
                         </div>
 
                         {/* Кнопка для мобильного меню */}
@@ -106,41 +102,18 @@ const Navbar: React.FC = () => {
 
                         {/* Десктопное меню */}
                         <div className="hidden text-base font-medium lg:flex lg:gap-x-14 xl:gap-x-20">
-                            <Link
-                                to="ideology"
-                                smooth={true}
-                                duration={600}
-                                className="hover:text-[#FFE6E6] transition-colors cursor-pointer"
-                            >
-                                {t('navbar.menu.ideology')}
-                            </Link>
-
-                            <Link
-                                to="tokenomics"
-                                smooth={true}
-                                duration={600}
-                                className="hover:text-[#FFE6E6] transition-colors cursor-pointer"
-                            >
-                                {t('navbar.menu.tokenomics')}
-                            </Link>
-
-                            <Link
-                                to="roadmap"
-                                smooth={true}
-                                duration={600}
-                                className="hover:text-[#FFE6E6] transition-colors cursor-pointer"
-                            >
-                                {t('navbar.menu.roadmap')}
-                            </Link>
-
-                            <Link
-                                to="social"
-                                smooth={true}
-                                duration={600}
-                                className="hover:text-[#FFE6E6] transition-colors cursor-pointer"
-                            >
-                                {t('navbar.menu.social')}
-                            </Link>
+                            {menuItems.map((item) => (
+                                <Link
+                                    key={item.to}
+                                    to={item.to}
+                                    smooth={true}
+                                    duration={600}
+                                    className="relative group hover:text-teal-200 transition-colors duration-300 px-1 cursor-pointer"
+                                >
+                                    {item.label}
+                                    <span className="absolute -bottom-0.5 left-1/2 h-px w-0 -translate-x-1/2 bg-teal-500 transition-all duration-300 group-hover:w-full"></span>
+                                </Link>
+                            ))}
                         </div>
                     </div>
                     

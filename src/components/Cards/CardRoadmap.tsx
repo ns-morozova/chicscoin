@@ -39,9 +39,9 @@ const CardRoadmap: React.FC<CardRoadmapProps> = ({ title, description, number, t
                 ></div>
 
                 <span className="md:hidden">{number}. </span>
-                {t(title)}
+                    {t(title)}
                 <span
-                    className={`absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r transition-all duration-500 ease-out group-hover:w-full
+                    className={`absolute -bottom-1 left-0 h-px w-0 bg-gradient-to-r transition-all duration-500 ease-out group-hover:w-full
                         ${type === CardType.Primary ? 'from-[#AF0092] to-[#EB9FBE]' : 'from-[#14b8a6] to-[#115e59]'}
                     `}
                 ></span>
