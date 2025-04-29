@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button } from '../components/Button';
+import { Button, ButtonType } from '../components/Button';
 
 const HeroSection: React.FC = () => {
     const { t } = useTranslation();
@@ -10,7 +10,7 @@ const HeroSection: React.FC = () => {
             <div
                 className="relative w-full max-w-7xl mx-auto h-[500px] bg-bottom-right pt-2 sm:bg-center sm:h-[550px] sm:pt-24 md:h-[600px] md:pt-28 lg:h-[750px] lg:pt-36 xl:h-[850px]"
                 style={{
-                    backgroundImage: "url('/images/banner.JPG')",
+                    backgroundImage: "url('/images/banner-hero.JPG')",
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
                 }}
@@ -46,9 +46,7 @@ const HeroSection: React.FC = () => {
                             {t('hero.description')}
                         </p>
                     </div>
-                    
-                    <Button className="max-w-max">{t('hero.button')}</Button>
-
+                    <Button type={ButtonType.White} className="max-w-max">{t('hero.button')}</Button>
                 </div>
             </div>
         </section>

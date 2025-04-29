@@ -1,19 +1,28 @@
 import React from 'react';
 
+export enum ButtonType {
+    White = 'white',
+    Gradient = 'gradient',
+}
+
 interface ButtonProps {
     href?: string;
     onClick?: () => void;
+    type: ButtonType;
     className?: string;
     children: React.ReactNode;
 }
 
-const Button: React.FC<ButtonProps> = ({ href, onClick, className, children }) => {
+const Button: React.FC<ButtonProps> = ({ href, onClick, type, className, children }) => {
     const baseClasses =
-        'group relative flex items-center justify-center overflow-hidden rounded-full bg-white px-4 py-2 md:px-6 md:py-3 text-sm md:text-base text-gray-950 shadow-sm ring-1 ring-gray-200 transition-colors duration-300 hover:border-pink-500/50 hover:text-pink-700 hover:ring-pink-300';
+        'group relative flex items-center justify-center overflow-hidden rounded-full px-4 py-2 md:px-6 md:py-3 text-sm md:text-base shadow-sm transition-colors duration-300 z-20';
 
     return href ? (
         // Если передан href, рендерим ссылку <a>
-        <a href={href} className={`${baseClasses} ${className}`}>
+        <a href={href} className={`${baseClasses} ${className}
+            ${type === ButtonType.White ? 'bg-white text-gray-950 ring-1 ring-gray-200 hover:border-pink-500/50 hover:text-pink-700 hover:ring-pink-300'
+                : 'bg-gradient-to-r from-[#AF0092] to-[#14B8A6] text-white hover:text-teal-200'}
+        `}>
             <span className="relative z-10 flex items-center">
                 {children}
                 {/* Стрелка */}
@@ -35,7 +44,10 @@ const Button: React.FC<ButtonProps> = ({ href, onClick, className, children }) =
         </a>
     ) : (
         // Если href не передан, рендерим кнопку <button>
-        <button onClick={onClick} className={`${baseClasses} ${className}`}>
+        <button onClick={onClick} className={`${baseClasses} ${className}
+            ${type === ButtonType.White ? 'bg-white text-gray-950 ring-1 ring-gray-200 hover:border-pink-500/50 hover:text-pink-700 hover:ring-pink-300'
+                : 'bg-gradient-to-r from-[#AF0092] to-[#14B8A6] text-white hover:text-teal-200'}
+        `}>
             <span className="relative z-10 flex items-center">
                 {children}
                 {/* Стрелка */}

@@ -21,8 +21,7 @@ const CardRoadmap: React.FC<CardRoadmapProps> = ({ title, description, number, t
         <div
             className={`relative bg-black overflow-hidden rounded-3xl px-6 py-8 shadow-lg transition-all duration-300 hover:shadow-2xl group z-10
                 ${className || ''}
-                ${type === CardType.Primary ? 'hover:bg-pink-950' : 'hover:bg-teal-900'
-                }
+                ${type === CardType.Primary ? 'hover:bg-pink-950' : 'hover:bg-teal-900'}
             `}
         >
             <h3
@@ -34,8 +33,7 @@ const CardRoadmap: React.FC<CardRoadmapProps> = ({ title, description, number, t
                 {/* Пульсирующая точка */}
                 <div
                     className={`hidden md:block absolute top-1/2 -translate-y-1/2 left-0 md:w-5 md:h-5 rounded-full opacity-100 group-hover:opacity-100 group-hover:animate-ping
-                        ${type === CardType.Primary ? 'bg-[#c00aa2]/80' : 'bg-teal-600/80'
-                        }
+                        ${type === CardType.Primary ? 'bg-[#c00aa2]/80' : 'bg-teal-600/80'}
                     `}
                     style={{ animationDuration: '3s' }}
                 ></div>
@@ -44,8 +42,7 @@ const CardRoadmap: React.FC<CardRoadmapProps> = ({ title, description, number, t
                 {t(title)}
                 <span
                     className={`absolute bottom-0 left-0 h-px w-0 bg-gradient-to-r transition-all duration-500 ease-out group-hover:w-full
-                        ${type === CardType.Primary ? 'from-[#AF0092] to-[#EB9FBE]' : 'from-[#14b8a6] to-[#115e59]'
-                        }
+                        ${type === CardType.Primary ? 'from-[#AF0092] to-[#EB9FBE]' : 'from-[#14b8a6] to-[#115e59]'}
                     `}
                 ></span>
             </h3>
@@ -56,8 +53,7 @@ const CardRoadmap: React.FC<CardRoadmapProps> = ({ title, description, number, t
 
             <div
                 className={`absolute bottom-0 left-0 h-[3px] w-0 bg-gradient-to-r transition-all duration-500 ease-out group-hover:w-full
-                    ${type === CardType.Primary ? 'from-[#AF0092] to-[#EB9FBE]' : 'from-[#14b8a6] to-[#115e59]'
-                    }
+                    ${type === CardType.Primary ? 'from-[#AF0092] to-[#EB9FBE]' : 'from-[#14b8a6] to-[#115e59]'}
                 `}
             ></div>
         </div>

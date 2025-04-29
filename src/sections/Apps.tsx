@@ -9,7 +9,7 @@ const Apps: React.FC = () => {
             <div
                 className="relative max-w-7xl mx-auto py-20 bg-top-left sm:py-28 md:py-36 md:bg-center"
                 style={{
-                    backgroundImage: "url('/images/bg-banner.jpg')",
+                    backgroundImage: "url('/images/banner-apps.jpg')",
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
                 }}
