@@ -58,6 +58,16 @@
             "description": "Организация турниров среди девушек-стримеров (CS2, Dota, FIFA, WoT) при поддержке CHICS с освещением в крупных СМИ."
         }
     },
+    "distribution": {
+        "title": "Распределение эмиссии CHICS (1 миллиард CHICS)",
+        "totalEmission": "Общий выпуск: 1 миллиард CHICS",
+        "openMarket": "45% на открытый рынок",
+        "developersAndInvestors": "55% разработчикам и инвесторам предварительного этапа",
+        "frozenUntil2025": "70% заморожено до 2025 года",
+        "marketingAndCommunity": "30% на маркетинг и сообщество",
+        "ofWhich": "из них",
+        "and": "и"
+    },
     "footer": {
         "title": "chics coin",
         "copyright": "© 2023 CHICS Coin. Все права защищены."

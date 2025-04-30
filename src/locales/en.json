@@ -58,6 +58,16 @@
             "description": "Organization of tournaments among female streamers (CS2, Dota, FIFA, WoT) supported by CHICS with coverage in major media."
         }
     },
+    "distribution": {
+        "title": "Distribution of CHICS Emission (1 Billion CHICS)",
+        "totalEmission": "Total Emission: 1 Billion CHICS",
+        "openMarket": "45% to Open Market",
+        "developersAndInvestors": "55% to Developers & Pre-Seed Investors",
+        "frozenUntil2025": "70% Frozen until 2025",
+        "marketingAndCommunity": "30% for Marketing and Community",
+        "ofWhich": "of which",
+        "and": "and"
+    },
     "footer": {
         "title": "chics coin",
         "copyright": "© 2023 CHICS Coin. All rights reserved."
