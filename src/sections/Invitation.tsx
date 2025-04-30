@@ -9,7 +9,7 @@ const Invitation: React.FC = () => {
     // Хук для отслеживания видимости секции
     const [ref, inView] = useInView({
         triggerOnce: false,
-        threshold: 0.4, // Триггер, когда 50% секции видно
+        threshold: 0.4,
     });
 
     return (
@@ -25,17 +25,16 @@ const Invitation: React.FC = () => {
             >
                 <div className="relative flex flex-col items-center z-10">
                     <h2
-                        className={`mb-3 font-medium text-center text-xl md:text-4xl md:mb-6 transition-transform duration-1000 ease-out ${
-                            inView ? 'opacity-100 translate-y-0 delay-[200ms]' : 'opacity-0 translate-y-10'
-                        }`}
+                        className={`mb-3 font-medium text-center text-xl md:text-4xl md:mb-6 animationShift ${
+                            inView ? 'endShift' : 'startShift'
+                    }`}
                     >
                         Присоединиться сейчас
                     </h2>
 
                     <div
-                        className={`transition-transform duration-1000 ease-out ${
-                            inView ? 'opacity-100 translate-y-0 delay-[400ms]' : 'opacity-0 translate-y-10'
-                        }`}
+                        className={`animationShift tr-double-delay ${
+                            inView ? 'endShiftBtn' : 'startShiftBtn'}`}
                     >
                         <Button
                             type={ButtonType.Gradient}
