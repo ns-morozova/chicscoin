@@ -61,7 +61,7 @@ const Apps: React.FC = () => {
 
                     <div className="flex justify-center gap-5">
                         <div
-                            className={`w-full max-w-40 md:max-w-44 lg:max-w-52 cursor-pointer transition-all duration-300 hover:scale-105 animationShift tr-delay ${
+                            className={`w-full max-w-40 md:max-w-44 lg:max-w-52 cursor-pointer animationShift tr-delay ${
                                 inView ? 'endShift' : 'startShift'
                             }`}
                         >
@@ -72,7 +72,7 @@ const Apps: React.FC = () => {
                             />
                         </div>
                         <div
-                            className={`w-full max-w-40 md:max-w-44 lg:max-w-52 cursor-pointer transition-all duration-300 hover:scale-105 animationShift tr-double-delay ${
+                            className={`w-full max-w-40 md:max-w-44 lg:max-w-52 cursor-pointer animationShift tr-double-delay ${
                                 inView ? 'endShift' : 'startShift'
                             }`}
                         >

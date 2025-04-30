@@ -8,7 +8,7 @@ const HeroSection: React.FC = () => {
 
     // Хук для отслеживания видимости секции
     const [ref, inView] = useInView({
-        triggerOnce: false,
+        triggerOnce: true,
         threshold: 0.1,
     });
 
