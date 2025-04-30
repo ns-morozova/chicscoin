@@ -77,6 +77,10 @@ button {
     transition-delay: 0.4s;
 }
 
+.tr-double-delay {
+    transition-delay: 0.8s;
+}
+
 .startShift {
     transform: translateY(50px);
     opacity: 0;
@@ -84,6 +88,16 @@ button {
 
 .endShift {
     transform: translateY(0);
+    opacity: 1;
+}
+
+.startShiftBtn {
+    transform: translateX(-70px);
+    opacity: 0;
+}
+
+.endShiftBtn {
+    transform: translateX(0);
     opacity: 1;
 }
 
