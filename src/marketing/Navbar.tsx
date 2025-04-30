@@ -78,7 +78,7 @@ const Navbar: React.FC = () => {
                                 className="-m-1.5 p-1.5 cursor-pointer"
                             >
                                 <span className="sr-only">{t('navbar.logo')}</span>
-                                <div className="w-10 md:w-11 lg:w-13 h-auto rounded-full overflow-hidden">
+                                <div className="w-10 md:w-11 lg:w-13 h-auto rounded-full hover:rotate-12 hover:shadow-[0_0_15px] hover:scale-105 hover:shadow-teal-300 transition-all duration-500 ease-out overflow-hidden">
                                     <img
                                         alt={t('navbar.logo')}
                                         src="/images/chiks-coin2.png"
@@ -258,7 +258,7 @@ const Navbar: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="w-32 h-auto mx-auto mt-20 rounded-full overflow-hidden">
+                    <div className="w-32 h-auto mx-auto mt-20 rounded-full hover:rotate-12 hover:shadow-[0_0_50px] hover:scale-105 hover:shadow-teal-600 transition-all duration-500 ease-out overflow-hidden">
                         <img
                             alt={t('navbar.logo')}
                             src="/images/chiks-coin2.png"

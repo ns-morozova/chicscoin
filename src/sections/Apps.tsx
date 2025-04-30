@@ -59,7 +59,7 @@ const Apps: React.FC = () => {
                         {t('apps.availableOn')}
                     </h2>
 
-                    <div className="flex flex-col gap-10 sm:flex-row sm:justify-center sm:gap-40 md:gap-52">
+                    <div className="flex flex-col gap-10 sm:flex-row sm:justify-center sm:gap-40 md:gap-52 lg:gap-60">
                         
                         <div className="relative w-3/5 pb-20 flex-shrink-0 sm:w-2/5 md:max-w-72">
                             <img

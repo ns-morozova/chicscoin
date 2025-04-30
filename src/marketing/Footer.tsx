@@ -39,7 +39,9 @@ const Footer: React.FC = () => {
                     className="-m-1.5 p-1.5 cursor-pointer"
                 >
                     <span className="sr-only">{t('navbar.logo')}</span>
-                    <div className="w-16 md:w-24 lg:w-28 h-auto rounded-full overflow-hidden">
+                    <div
+                        className="w-16 md:w-24 lg:w-28 h-auto rounded-full hover:rotate-12 hover:shadow-[0_0_50px] hover:scale-105 hover:shadow-teal-600 transition-all duration-500 ease-out overflow-hidden"
+                    >
                         <img
                             alt={t('navbar.logo')}
                             src="/images/chiks-coin2.png"
