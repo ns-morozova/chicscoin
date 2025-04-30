@@ -182,49 +182,25 @@ const Navbar: React.FC = () => {
                     </div>
                     <div className="mt-6 flow-root">
                         <div className="-my-6 divide-y divide-gray-500/25">
-                            <div className="font-medium text-base space-y-2 py-6">
-                                <Link
-                                    to="ideology"
-                                    smooth={true}
-                                    duration={600}
-                                    className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-800 transition-colors cursor-pointer"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                >
-                                    {t('navbar.menu.ideology')}
-                                </Link>
-                                <Link
-                                    to="tokenomics"
-                                    smooth={true}
-                                    duration={600}
-                                    className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-800 transition-colors cursor-pointer"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                >
-                                    {t('navbar.menu.tokenomics')}
-                                </Link>
-                                <Link
-                                    to="roadmap"
-                                    smooth={true}
-                                    duration={600}
-                                    className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-800 transition-colors cursor-pointer"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                >
-                                    {t('navbar.menu.roadmap')}
-                                </Link>
-                                <Link
-                                    to="social"
-                                    smooth={true}
-                                    duration={600}
-                                    className="-mx-3 block rounded-lg px-3 py-2 hover:bg-gray-800 transition-colors cursor-pointer"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                >
-                                    {t('navbar.menu.social')}
-                                </Link>
+                            <div className="font-medium text-base flex flex-col gap-6 py-6">
+                                {menuItems.map((item) => (
+                                    <Link
+                                        key={item.to}
+                                        to={item.to}
+                                        smooth={true}
+                                        duration={600}
+                                        className="relative -mx-3 w-max group hover:text-teal-200 transition-colors duration-300 px-1 cursor-pointer"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                        {item.label}
+                                        <span className="absolute -bottom-0.5 left-1/2 h-px w-0 -translate-x-1/2 bg-teal-500 transition-all duration-300 group-hover:w-full"></span>
+                                    </Link>
+                                ))}
                             </div>
                         </div>
                     </div>
 
                     {/* Переключатель языка в мобильном меню */}
-
                     <div className="absolute bottom-6 left-6">
                         <div className="lang-switcher relative w-max">
                             <div className="relative px-0.5">

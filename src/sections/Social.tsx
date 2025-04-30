@@ -58,7 +58,9 @@ const Social: React.FC = () => {
                         </a>
                     ))}
                     <div
-                        className="absolute w-full inset-0 bg-gradient-to-br from-[#AF0092]/70 to-[#14B8A6]/70 rounded-full blur-[50px] md:hidden"
+                        className={`absolute w-full inset-0 bg-gradient-to-br from-[#AF0092]/70 to-[#14B8A6]/70 rounded-full blur-[50px] md:hidden ${
+                            visibleLinks.includes(2) ? 'opacity-100' : 'opacity-0'
+                        }`}
                         style={{
                             willChange: 'transform, opacity',
                         }}
