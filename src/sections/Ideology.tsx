@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { CardIdeology } from '../components/Cards';
 
@@ -6,9 +6,15 @@ import { BsBroadcast } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
 import { AiOutlineTeam } from "react-icons/ai";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { useInView } from 'react-intersection-observer';
 
 const Ideology: React.FC = () => {
     const { t } = useTranslation();
+
+        const [ref, inView] = useInView({
+            triggerOnce: false,
+            threshold: 0.1,
+        });
 
     const cards = [
         {
@@ -29,16 +35,42 @@ const Ideology: React.FC = () => {
         },
     ];
 
+    // Состояние для управления видимостью каждой карточки
+    const [visibleCards, setVisibleCards] = useState<number[]>([]);
+
+    useEffect(() => {
+        if (inView) {
+            const startCardAnimation = async () => {
+                // Задержка перед анимацией заголовка и текста
+                await new Promise((resolve) => setTimeout(resolve, 600));
+
+                // Отображение карточек одна за другой
+                for (let i = 0; i < cards.length; i++) {
+                    await new Promise((resolve) => setTimeout(resolve, 120 * (i + 1)));
+                    setVisibleCards((prev) => [...prev, i]);
+                }
+            };
+            startCardAnimation();
+        } else {
+            // Сбрасываем видимость карточек, если секция вышла из зоны видимости
+            setVisibleCards([]);
+        }
+    }, [inView]);
+
     return (
         <section id="ideology" className="px-4 pb-8 lg:px-8 md:pt-8 md:pb-16">
 
-            <div className="max-w-7xl mx-auto">
+            <div ref={ref} className="max-w-7xl mx-auto">
                 <div className="bg-gradient-to-b from-[#AF0092] to-[#14B8A6] rounded-3xl text-center px-4 py-10 sm:pb-4 md:px-8 md:pt-20 md:pb-8">
                     <div className="mx-auto w-11/12 sm:w-3/5 md:w-3/4 lg:w-3/5 lg:max-w-lg">
-                        <h2 className="font-medium text-xl mb-2 md:mb-4 md:text-4xl lg:px-3">
+                        <h2 className={`font-medium text-xl mb-2 md:mb-4 md:text-4xl lg:px-3 transition-transform duration-1000 ease-out ${
+                            inView ? 'opacity-100 translate-y-0 delay-[50ms]' : 'opacity-0 translate-y-16'
+                        }`}>
                             {t('ideology.description')}
                         </h2>
-                        <p className="text-sm mb-8 md:mb-16 md:text-base lg:px-16">
+                        <p className={`text-sm mb-8 md:mb-16 md:text-base lg:px-16 transition-transform duration-1000 ease-out ${
+                            inView ? 'opacity-100 translate-y-0 delay-[400ms]' : 'opacity-0 translate-y-16'
+                        }`}>
                             {t('ideology.toolDescription')}
                         </p>
                     </div>
@@ -49,7 +81,11 @@ const Ideology: React.FC = () => {
                                 key={index}
                                 textKey={card.textKey}
                                 icon={card.icon}
-                                className="hover:bg-[#1A1A1A]"
+                                className={`hover:bg-[#1A1A1A] transition-transform duration-1600 ease-out ${
+                                    visibleCards.includes(index)
+                                    ? 'opacity-100 translate-y-0'
+                                        : 'opacity-0 translate-y-16'
+                                    }`}
                             />
                         ))}
                     </div>  

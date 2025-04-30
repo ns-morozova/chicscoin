@@ -32,7 +32,7 @@ const HeroSection: React.FC = () => {
                 <div className="-mt-8 lg:-mt-14 xl:-mt-4 relative flex flex-col items-center gap-5 px-4 md:gap-7 lg:px-8 z-20">
                     <div className="w-full flex flex-col gap-2 items-center lg:gap-3">
                         <h1
-                            className="font-audiowide font-bold text-center uppercase text-nowrap text-3xl md:text-6xl lg:text-7xl"
+                            className={`font-audiowide font-bold text-center uppercase text-nowrap text-3xl md:text-6xl lg:text-7xl`}
                             style={{
                                 background: 'linear-gradient(90deg, #AF0092, #14B8A6)',
                                 WebkitBackgroundClip: 'text',
