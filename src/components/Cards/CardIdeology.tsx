@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 interface CardIdeologyProps {
     textKey: string;
-    icon?: React.ReactElement<{ className?: string }>; // Явно указываем, что иконка поддерживает className
+    icon?: React.ReactElement<{ className?: string }>;
     className?: string;
 }
 
@@ -50,7 +50,6 @@ const CardIdeology: React.FC<CardIdeologyProps> = ({ textKey, icon, className })
                 </div>
             )}
 
-            {/* Текст */}
             <p className="relative text-left text-sm md:text-base text-white transition-colors duration-300 group-hover:text-teal-400">
                 {t(textKey)}
             </p>

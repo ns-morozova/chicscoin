@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { CardRoadmap, CardType } from '../components/Cards';
+import { CardRoadmap, CardRoadmapType } from '../components/Cards';
 
 const Roadmap: React.FC = () => {
     const { t } = useTranslation();
@@ -10,25 +10,25 @@ const Roadmap: React.FC = () => {
                 title: 'cardroadmap.concept.title',
                 description: 'cardroadmap.concept.description',
                 number: 'I',
-                type: CardType.Primary,
+            type: CardRoadmapType.Pink,
             },
             {
                 title: 'cardroadmap.start.title',
                 description: 'cardroadmap.start.description',
                 number: 'II',
-                type: CardType.Secondary,
+                type: CardRoadmapType.Teal,
             },
             {
                 title: 'cardroadmap.integration.title',
                 description: 'cardroadmap.integration.description',
                 number: 'III',
-                type: CardType.Primary,
+                type: CardRoadmapType.Pink,
             },
             {
                 title: 'cardroadmap.contests.title',
                 description: 'cardroadmap.contests.description',
                 number: 'IV',
-                type: CardType.Secondary,
+                type: CardRoadmapType.Teal,
             },
         ];
 

@@ -1,9 +1,42 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { CardTokenomics } from '../components/Cards';
+import { CardTokenomics, CardTokenomicsType } from '../components/Cards';
 
 const Tokenomics: React.FC = () => {
     const { t } = useTranslation();
+
+    const cards = [
+        {
+            number: 1,
+            textKey: 'cardtokenomics.emission',
+            type: CardTokenomicsType.Pink,
+            className: 'md:col-span-2 lg:col-span-3',
+        },
+        {
+            number: 2,
+            textKey: 'cardtokenomics.volume',
+            type: CardTokenomicsType.Teal,
+            className: 'lg:col-span-3',
+        },
+        {
+            number: 3,
+            textKey: 'cardtokenomics.marketing',
+            type: CardTokenomicsType.Teal,
+            className: 'lg:col-span-2',
+        },
+        {
+            number: 4,
+            textKey: 'cardtokenomics.voting',
+            type: CardTokenomicsType.Pink,
+            className: 'lg:col-span-2',
+        },
+        {
+            number: 5,
+            textKey: 'cardtokenomics.mining',
+            type: CardTokenomicsType.Pink,
+            className: 'lg:col-span-2',
+        },
+    ];
 
     return (
         <section id="tokenomics" className="px-4 py-8 lg:px-8 md:py-16">
@@ -14,50 +47,16 @@ const Tokenomics: React.FC = () => {
                 </h2>
 
                 <div className="flex flex-col gap-y-4 md:grid md:grid-cols-2 md:gap-x-4 lg:grid-cols-6">
-                    <CardTokenomics
-                        number={1}
-                        textKey="cardtokenomics.emission"
-                        type="primary"
-                        className="md:col-span-2 lg:col-span-3"
-                    />
-
-                    <CardTokenomics
-                        number={2}
-                        textKey="cardtokenomics.volume"
-                        type="secondary"
-                        className="lg:col-span-3"
-                    />
-
-                    <CardTokenomics
-                        number={3}
-                        textKey="cardtokenomics.marketing"
-                        type="secondary"
-                        className="lg:col-span-2"
-                    />
-
-                    <CardTokenomics
-                        number={4}
-                        textKey="cardtokenomics.voting"
-                        type="primary"
-                        className="lg:col-span-2"
-                    />
-
-                    <CardTokenomics
-                        number={5}
-                        textKey="cardtokenomics.mining"
-                        type="primary"
-                        className="lg:col-span-2"
-                    />
+                    {cards.map((card, index) => (
+                        <CardTokenomics
+                            key={index}
+                            number={card.number}
+                            textKey={card.textKey}
+                            type={card.type}
+                            className={card.className}
+                        />
+                    ))}
                 </div>
-
-                {/* <div
-                    className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-full h-full -z-10"
-                    style={{
-                        background: 'radial-gradient(circle, rgba(193, 0, 161, 0.5), rgba(48, 101, 125, 0.5))',
-                        filter: 'blur(150px)',
-                    }}
-                ></div> */}
-
             </div>
         </section>
     );
