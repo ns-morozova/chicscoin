@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { CardTokenomics, CardTokenomicsType } from '../components/Cards';
+import { useInView } from 'react-intersection-observer';
 
 const Tokenomics: React.FC = () => {
     const { t } = useTranslation();
+
+    // Хук для отслеживания видимости секции
+    const [ref, inView] = useInView({
+        triggerOnce: false,
+        threshold: 0.1,
+    });
 
     const cards = [
         {
@@ -38,11 +45,33 @@ const Tokenomics: React.FC = () => {
         },
     ];
 
+    // Состояние для управления видимостью каждой карточки
+    const [visibleCards, setVisibleCards] = useState<number[]>([]);
+
+    useEffect(() => {
+        if (inView) {
+            const startAnimation = async () => {
+                await new Promise((resolve) => setTimeout(resolve, 400));
+
+                for (let i = 0; i < cards.length; i++) {
+                    await new Promise((resolve) => setTimeout(resolve, 120 * (i + 1)));
+                    setVisibleCards((prev) => [...prev, i]);
+                }
+            };
+
+            startAnimation();
+        } else {
+            setVisibleCards([]);
+        }
+    }, [inView]);
+
     return (
         <section id="tokenomics" className="px-4 py-8 lg:px-8 md:py-16">
             
-            <div className="relative max-w-7xl mx-auto z-10">
-                <h2 className="mb-5 md:mb-10 lg:mb-12 font-medium text-center uppercase text-2xl md:text-5xl">
+            <div ref={ref} className="relative max-w-7xl mx-auto z-10">
+                <h2 className={`mb-5 md:mb-10 lg:mb-12 font-medium text-center uppercase text-2xl md:text-5xl animationShift ${
+                    inView ? 'endShift' : 'startShift'
+                }`}>
                     {t('tokenomics.title')}
                 </h2>
 
@@ -53,7 +82,8 @@ const Tokenomics: React.FC = () => {
                             number={card.number}
                             textKey={card.textKey}
                             type={card.type}
-                            className={card.className}
+                            className={`animationShift ${visibleCards.includes(index) ? 'endShift' : 'startShift'
+                                } ${card.className}`}
                         />
                     ))}
                 </div>
