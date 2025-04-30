@@ -65,19 +65,24 @@ const Apps: React.FC = () => {
                             <img
                                 alt="Mockup"
                                 src="/images/iPhone_Mockup_1.png"
-                                className=""
+                                className={`animationShift tr-delay ${
+                                    inView ? 'endShift' : 'startShift'
+                                }`}
                             />
                             <img
                                 alt="Mockup"
                                 src="/images/iPhone_Mockup_2.png"
-                                className="absolute w-full bottom-0 left-32 flex-shrink-0 md:left-44 z-10"
+                                className={`absolute w-full bottom-0 left-32 flex-shrink-0 md:left-44 z-10 animationShift tr-double-delay ${
+                                    inView ? 'endShift' : 'startShift'
+                                }`}
                             />
                         </div>
 
                         <div className="flex justify-center gap-5 sm:flex-col">
                             <div
-                                className={`w-full max-w-40 md:max-w-44 lg:max-w-52 cursor-pointer animationShift tr-delay ${inView ? 'endShift' : 'startShift'
-                                    }`}
+                                className={`w-full max-w-40 md:max-w-44 lg:max-w-52 cursor-pointer animationShift !delay-[1200ms] ${
+                                    inView ? 'endShift' : 'startShift'
+                                }`}
                             >
                                 <img
                                     alt="App Store"
@@ -86,8 +91,9 @@ const Apps: React.FC = () => {
                                 />
                             </div>
                             <div
-                                className={`w-full max-w-40 md:max-w-44 lg:max-w-52 cursor-pointer animationShift tr-double-delay ${inView ? 'endShift' : 'startShift'
-                                    }`}
+                                className={`w-full max-w-40 md:max-w-44 lg:max-w-52 cursor-pointer animationShift !delay-[1600ms] ${
+                                    inView ? 'endShift' : 'startShift'
+                                }`}
                             >
                                 <img
                                     alt="Google Play"

@@ -54,7 +54,7 @@ const Tokenomics: React.FC = () => {
                 await new Promise((resolve) => setTimeout(resolve, 400));
 
                 for (let i = 0; i < cards.length; i++) {
-                    await new Promise((resolve) => setTimeout(resolve, 120 * (i + 1)));
+                    await new Promise((resolve) => setTimeout(resolve, 100 * (i + 1)));
                     setVisibleCards((prev) => [...prev, i]);
                 }
             };
