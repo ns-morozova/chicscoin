@@ -59,28 +59,42 @@ const Apps: React.FC = () => {
                         {t('apps.availableOn')}
                     </h2>
 
-                    <div className="flex justify-center gap-5">
-                        <div
-                            className={`w-full max-w-40 md:max-w-44 lg:max-w-52 cursor-pointer animationShift tr-delay ${
-                                inView ? 'endShift' : 'startShift'
-                            }`}
-                        >
+                    <div className="flex flex-col gap-10 sm:flex-row sm:justify-center sm:gap-40 md:gap-52">
+                        
+                        <div className="relative w-3/5 pb-20 flex-shrink-0 sm:w-2/5 md:max-w-72">
                             <img
-                                alt="App Store"
-                                src="/icons/AppStore.svg"
-                                className="w-full h-auto object-cover"
+                                alt="Mockup"
+                                src="/images/iPhone_Mockup_1.png"
+                                className=""
+                            />
+                            <img
+                                alt="Mockup"
+                                src="/images/iPhone_Mockup_2.png"
+                                className="absolute w-full bottom-0 left-32 flex-shrink-0 md:left-44 z-10"
                             />
                         </div>
-                        <div
-                            className={`w-full max-w-40 md:max-w-44 lg:max-w-52 cursor-pointer animationShift tr-double-delay ${
-                                inView ? 'endShift' : 'startShift'
-                            }`}
-                        >
-                            <img
-                                alt="Google Play"
-                                src="/icons/GooglePlay.svg"
-                                className="w-full h-auto object-cover"
-                            />
+
+                        <div className="flex justify-center gap-5 sm:flex-col">
+                            <div
+                                className={`w-full max-w-40 md:max-w-44 lg:max-w-52 cursor-pointer animationShift tr-delay ${inView ? 'endShift' : 'startShift'
+                                    }`}
+                            >
+                                <img
+                                    alt="App Store"
+                                    src="/icons/AppStore.svg"
+                                    className="w-full h-auto object-cover"
+                                />
+                            </div>
+                            <div
+                                className={`w-full max-w-40 md:max-w-44 lg:max-w-52 cursor-pointer animationShift tr-double-delay ${inView ? 'endShift' : 'startShift'
+                                    }`}
+                            >
+                                <img
+                                    alt="Google Play"
+                                    src="/icons/GooglePlay.svg"
+                                    className="w-full h-auto object-cover"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
