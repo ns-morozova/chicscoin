@@ -6,7 +6,6 @@ import { useInView } from 'react-intersection-observer';
 const Invitation: React.FC = () => {
     const { t } = useTranslation();
 
-    // Хук для отслеживания видимости секции
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.4,
@@ -45,7 +44,6 @@ const Invitation: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Градиентные слои */}
                 <div
                     className="absolute inset-0 w-full h-full"
                     style={{

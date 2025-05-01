@@ -10,7 +10,6 @@ import { useInView } from 'react-intersection-observer';
 const Ideology: React.FC = () => {
     const { t } = useTranslation();
 
-    // Хук для отслеживания видимости секции
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.1,
@@ -35,22 +34,17 @@ const Ideology: React.FC = () => {
         },
     ];
 
-    // Состояние для управления видимостью каждой карточки
     const [visibleCards, setVisibleCards] = useState<number[]>([]);
 
-    // Отмена анимации при выходе из зоны видимости
     const animationRef = useRef<boolean>(false);
 
     useEffect(() => {
         if (inView) {
-            // Разрешаем анимацию
             animationRef.current = true;
 
             const startCardAnimation = async () => {
-                // Задержка перед началом анимации заголовка и текста
                 await new Promise((resolve) => setTimeout(resolve, 400));
 
-                // Показ карточек одна за другой
                 for (let i = 0; i < cards.length; i++) {
                     if (!animationRef.current) break;
 

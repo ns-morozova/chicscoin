@@ -6,7 +6,6 @@ import { useInView } from 'react-intersection-observer';
 const Tokenomics: React.FC = () => {
     const { t } = useTranslation();
 
-    // Хук для отслеживания видимости секции
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.1,
@@ -45,7 +44,6 @@ const Tokenomics: React.FC = () => {
         },
     ];
 
-    // Состояние для управления видимостью каждой карточки
     const [visibleCards, setVisibleCards] = useState<number[]>([]);
 
     useEffect(() => {

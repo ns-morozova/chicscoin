@@ -6,7 +6,6 @@ import { useInView } from 'react-intersection-observer';
 const Roadmap: React.FC = () => {
     const { t } = useTranslation();
 
-    // Хук для отслеживания видимости секции
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.1,
@@ -39,7 +38,6 @@ const Roadmap: React.FC = () => {
         },
     ];
 
-    // Состояние для управления видимостью каждой карточки
     const [visibleCards, setVisibleCards] = useState<number[]>([]);
 
     useEffect(() => {
@@ -94,7 +92,6 @@ const Roadmap: React.FC = () => {
                                 }`}
                             />
                         ))}
-                        {/* <div className="absolute top-2 left-4 w-1 h-5/6 bg-gradient-to-b from-[#AF0092] to-[#14B8A6] md:left-8 z-0"></div> */}
                         <div
                             className={`absolute top-20 left-4 w-1 h-5/6 bg-gradient-to-b from-[#AF0092] to-[#14B8A6] md:left-8 z-0 transition-opacity duration-300 ${
                                 visibleCards.includes(1) ? 'opacity-100' : 'opacity-0'}`}

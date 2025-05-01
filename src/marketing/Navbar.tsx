@@ -17,22 +17,18 @@ const Navbar: React.FC = () => {
         { to: "social", label: t('headlines.social') },
     ];
 
-    // Ссылка на выпадающее меню
     const dropdownRef = useRef<HTMLDivElement>(null);
 
-    // Функция для переключения языка
     const changeLanguage = (lng: string) => {
         i18n.changeLanguage(lng);
     };
 
-    // Обработчик изменения языка
     const handleLanguageChange = (language: string) => {
         setCurrentLanguage(language);
         setIsOpen(false);
         changeLanguage(language);
     };
 
-    // Закрытие выпадающего меню при клике вне его
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             if (
@@ -52,7 +48,6 @@ const Navbar: React.FC = () => {
 
     return (
         <header className="fixed top-0 left-0 w-full px-4 lg:px-8 z-50">
-            {/* Центрированный контейнер для десктопа */}
             <div className="relative mx-auto max-w-7xl">
                 <nav
                     aria-label="Global"
@@ -69,7 +64,6 @@ const Navbar: React.FC = () => {
                     ></div>
 
                     <div className="relative flex items-center justify-end px-3 py-3 sm:px-4 sm:py-3 md:px-5 md:py-3.5 lg:justify-center lg:py-4.5">
-                        {/* Логотип */}
                         <div className="absolute left-1.5 flex lg:flex-1">
                             <Link
                                 to="home"
@@ -88,7 +82,6 @@ const Navbar: React.FC = () => {
                             </Link>
                         </div>
 
-                        {/* Кнопка для мобильного меню */}
                         <div className="flex lg:hidden">
                             <button
                                 type="button"
@@ -100,7 +93,6 @@ const Navbar: React.FC = () => {
                             </button>
                         </div>
 
-                        {/* Десктопное меню */}
                         <div className="hidden text-base font-medium lg:flex lg:gap-x-14 xl:gap-x-20">
                             {menuItems.map((item) => (
                                 <Link
@@ -119,7 +111,6 @@ const Navbar: React.FC = () => {
                     
                 </nav>
                 
-                {/* Переключатель языка */}
                 <div
                     className="lang-switcher pr-2 transition-colors duration-300 hidden lg:block lg:absolute lg:right-4 lg:top-1/2 lg:-translate-y-1/2"
                     ref={dropdownRef}
@@ -139,7 +130,6 @@ const Navbar: React.FC = () => {
                                 className="absolute inset-0 bg-gradient-to-r from-[#AF0092] to-teal-900 rounded -z-10"
                             ></div>
                         </div>
-                        {/* Выпадающее меню */}
                         {isOpen && (
                             <div className="absolute top-full right-0 w-20 bg-white rounded shadow-lg mt-2 py-2">
                                 <button
@@ -166,7 +156,6 @@ const Navbar: React.FC = () => {
                 </div>
             </div>
 
-            {/* Мобильное меню */}
             <Dialog open={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} className="lg:hidden">
                 <div className="fixed inset-0 z-10 bg-black/50" />
                 <DialogPanel className="fixed inset-y-0 right-0 w-full overflow-y-auto bg-[#141414] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10 z-50">
@@ -200,7 +189,6 @@ const Navbar: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* Переключатель языка в мобильном меню */}
                     <div className="absolute bottom-6 left-6">
                         <div className="lang-switcher relative w-max">
                             <div className="relative px-0.5">

@@ -11,7 +11,6 @@ interface DataItem {
 const TokenDistribution: React.FC = () => {
     const { t } = useTranslation();
 
-    // Хук для отслеживания видимости секции
         const [ref, inView] = useInView({
             triggerOnce: true,
             threshold: 0.3,

@@ -50,8 +50,6 @@ const Footer: React.FC = () => {
                     </div>
                 </Link>
 
-                {/* <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-[#AF0092] to-[#14B8A6] md:h-0.5"></div> */}
-
                 <div
                     className={`absolute top-0 left-0 w-full h-px bg-gradient-to-r from-[#AF0092] to-[#14B8A6] md:h-0.5 transition-all duration-2000 ease-out ${inView ? 'opacity-100' : 'opacity-0'
                         }`}

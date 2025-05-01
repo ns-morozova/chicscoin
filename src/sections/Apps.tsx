@@ -5,9 +5,8 @@ import { useInView } from 'react-intersection-observer';
 const Apps: React.FC = () => {
     const { t } = useTranslation();
 
-    // Хук для отслеживания видимости секции
     const [ref, inView] = useInView({
-        triggerOnce: true, // Анимация запускается только один раз
+        triggerOnce: true,
         threshold: 0.2,
     });
 
@@ -22,7 +21,6 @@ const Apps: React.FC = () => {
                     backgroundRepeat: 'no-repeat',
                 }}
             >
-                {/* Градиентные слои */}
                 <div className="absolute inset-0 w-full h-full bg-black/20 md:bg-black/40"></div>
                 <div
                     className="absolute inset-0 w-full h-full"
@@ -49,7 +47,6 @@ const Apps: React.FC = () => {
                     }}
                 ></div>
 
-                {/* Контент */}
                 <div className="relative z-10">
                     <h2
                         className={`mb-10 mx-auto w-2/3 sm:w-auto font-medium text-center text-xl md:text-3xl md:mb-16 animationShift ${

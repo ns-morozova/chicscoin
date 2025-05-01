@@ -8,13 +8,11 @@ const Social: React.FC = () => {
         { href: 'https://discord.com/', icon: '/icons/discord.svg', alt: 'Discord' },
     ];
 
-    // Хук для отслеживания видимости секции
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.1,
     });
 
-    // Состояние для управления видимостью каждой ссылки
     const [visibleLinks, setVisibleLinks] = useState<number[]>([]);
 
     useEffect(() => {
