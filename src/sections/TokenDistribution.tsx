@@ -136,7 +136,7 @@ const TokenDistribution: React.FC = () => {
                     }`}>
                         {t('distribution.totalEmission')}
                     </p>
-                    <ul className="flex flex-col items-start gap-2 text-left list-disc list-inside text-sm md:text-base">
+                    <ul className="flex flex-col items-start gap-2 text-left list-disc list-inside text-sm mx-auto sm:w-3/4 md:text-base">
                         <li className={`animationShift !delay-[1200ms] ${inView ? 'endShift' : 'startShift'
                     }`}>{t('distribution.openMarket')}</li>
                         <li className={`animationShift !delay-[1400ms] ${inView ? 'endShift' : 'startShift'

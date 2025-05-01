@@ -61,10 +61,10 @@
     "distribution": {
         "title": "Распределение эмиссии CHICS (1 миллиард CHICS)",
         "totalEmission": "Общий выпуск: 1 миллиард CHICS",
-        "openMarket": "45% на открытый рынок",
-        "developersAndInvestors": "55% разработчикам и инвесторам предварительного этапа",
-        "frozenUntil2025": "70% заморожено до 2025 года",
-        "marketingAndCommunity": "30% на маркетинг и сообщество",
+        "openMarket": "45% на открытом рынке",
+        "developersAndInvestors": "55% у девелоперов и pre-seed инвесторов",
+        "frozenUntil2025": "70% объёма монет разработчиков замораживается до конца 2025 года",
+        "marketingAndCommunity": "30% выделяется на маркетинг и продвижение в криптосообществе",
         "ofWhich": "из них",
         "and": "и"
     },

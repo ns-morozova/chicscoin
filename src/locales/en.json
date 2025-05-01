@@ -59,12 +59,12 @@
         }
     },
     "distribution": {
-        "title": "Distribution of CHICS Emission (1 Billion CHICS)",
-        "totalEmission": "Total Emission: 1 Billion CHICS",
-        "openMarket": "45% to Open Market",
-        "developersAndInvestors": "55% to Developers & Pre-Seed Investors",
-        "frozenUntil2025": "70% Frozen until 2025",
-        "marketingAndCommunity": "30% for Marketing and Community",
+        "title": "CHICS Emission Distribution (1 billion CHICS)",
+        "totalEmission": "Total Emission: 1 billion CHICS",
+        "openMarket": "45% on the open market",
+        "developersAndInvestors": "55% to developers and pre-seed investors",
+        "frozenUntil2025": "70% of the developers' tokens are frozen until the end of 2025",
+        "marketingAndCommunity": "30% allocated for marketing and promotion within the crypto community",
         "ofWhich": "of which",
         "and": "and"
     },
