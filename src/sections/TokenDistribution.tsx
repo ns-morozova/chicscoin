@@ -1,6 +1,7 @@
 import React from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 import { useTranslation } from 'react-i18next';
+import { useInView } from 'react-intersection-observer';
 
 interface DataItem {
     name: string;
@@ -9,6 +10,12 @@ interface DataItem {
 
 const TokenDistribution: React.FC = () => {
     const { t } = useTranslation();
+
+    // Хук для отслеживания видимости секции
+        const [ref, inView] = useInView({
+            triggerOnce: true,
+            threshold: 0.2,
+        });
 
     // Данные для основной диаграммы (45% и 55%)
     const mainData: DataItem[] = [
@@ -24,13 +31,17 @@ const TokenDistribution: React.FC = () => {
 
     return (
         <section className="px-4 py-8 lg:px-8 md:py-16">
-            <div className="max-w-7xl mx-auto flex flex-col items-center justify-center">
+            <div ref={ref} className="max-w-7xl mx-auto flex flex-col items-center justify-center">
                 {/* Заголовок */}
-                <h2 className="text-2xl font-bold mb-2 text-center">
+                <h2 className={`text-2xl font-bold mb-2 text-center animationShift ${
+                    inView ? 'endShift' : 'startShift'
+                }`}>
                     {t('distribution.title')}
                 </h2>
 
-                <div className="relative w-full">
+                <div className={`relative w-full animationShift tr-delay ${
+                    inView ? 'endShift' : 'startShift'
+                }`}>
                     {/* Диаграмма */}
                     <ResponsiveContainer width="100%" height={350}>
                         <PieChart>
@@ -120,10 +131,16 @@ const TokenDistribution: React.FC = () => {
 
                 {/* Подробное описание */}
                 <div className="mt-4 text-center">
-                    <p className="font-medium mb-4 md:mb-6">{t('distribution.totalEmission')}</p>
+                    <p className={`font-medium mb-4 md:mb-6 animationShift !delay-[1000ms] ${
+                        inView ? 'endShift' : 'startShift'
+                    }`}>
+                        {t('distribution.totalEmission')}
+                    </p>
                     <ul className="flex flex-col items-start gap-2 text-left list-disc list-inside text-sm md:text-base">
-                        <li>{t('distribution.openMarket')}</li>
-                        <li>
+                        <li className={`animationShift !delay-[1200ms] ${inView ? 'endShift' : 'startShift'
+                    }`}>{t('distribution.openMarket')}</li>
+                        <li className={`animationShift !delay-[1400ms] ${inView ? 'endShift' : 'startShift'
+                        }`}>
                             {t('distribution.developersAndInvestors')} <br />
                             <span className="pl-3.5">
                                 ({t('distribution.ofWhich')} {t('distribution.frozenUntil2025')} {t('distribution.and')}{' '}
