@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
                             color: 'transparent',
                         }}
                     >
-                        {t('footer.title')}
+                        {t('title')}
                     </h2>
                     <p className="text-white/50 text-xs md:text-base">
                         {t('footer.copyright')}

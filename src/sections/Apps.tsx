@@ -15,7 +15,7 @@ const Apps: React.FC = () => {
         <section id="social" className="px-4 py-8 lg:px-8 md:py-16">
             <div
                 ref={ref}
-                className="relative max-w-7xl mx-auto py-20 bg-top-left sm:py-28 md:py-36 md:bg-center"
+                className="relative max-w-7xl mx-auto py-10 bg-top-left sm:py-16 md:py-20 md:bg-center"
                 style={{
                     backgroundImage: "url('/images/banner-apps.jpg')",
                     backgroundSize: 'cover',

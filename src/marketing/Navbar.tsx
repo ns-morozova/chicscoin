@@ -11,10 +11,10 @@ const Navbar: React.FC = () => {
     const { t, i18n } = useTranslation();
 
     const menuItems = [
-        { to: "ideology", label: t('navbar.menu.ideology') },
-        { to: "tokenomics", label: t('navbar.menu.tokenomics') },
-        { to: "roadmap", label: t('navbar.menu.roadmap') },
-        { to: "social", label: t('navbar.menu.social') },
+        { to: "ideology", label: t('headlines.ideology') },
+        { to: "tokenomics", label: t('headlines.tokenomics') },
+        { to: "roadmap", label: t('headlines.roadmap') },
+        { to: "social", label: t('headlines.social') },
     ];
 
     // Ссылка на выпадающее меню

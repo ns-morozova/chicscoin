@@ -1,4 +1,14 @@
 {
+    "title": "chics coin",
+    "button": "Get started",
+    "invitation": "Join now",
+    "headlines": {
+        "ideology": "Ideology",
+        "tokenomics": "Tokenomics",
+        "roadmap": "Roadmap",
+        "social": "Social Media"
+    },
+
     "navbar": {
         "logo": "Your Company",
         "menu": {
@@ -9,20 +19,11 @@
         }
     },
     "hero": {
-        "title": "chics coin",
-        "description": "New level of interaction in the gaming community",
-        "button": "Get started"
+        "description": "New level of interaction in the gaming community"
     },
     "ideology": {
-        "title": "Ideology",
         "description": "CHICS — cryptocurrency for gamers and streamers",
         "toolDescription": "A convenient tool for gamers to interact with popular female streamers"
-    },
-    "tokenomics": {
-        "title": "Tokenomics"
-    },
-    "roadmap": {
-        "title": "Roadmap"
     },
     "apps": {
         "availableOn": "Available on App Store and Google Play"
@@ -69,7 +70,6 @@
         "and": "and"
     },
     "footer": {
-        "title": "chics coin",
         "copyright": "© 2023 CHICS Coin. All rights reserved."
     }
 }

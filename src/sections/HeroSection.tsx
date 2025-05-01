@@ -51,7 +51,7 @@ const HeroSection: React.FC = () => {
                                 color: 'transparent',
                             }}
                         >
-                            {t('hero.title')}
+                            {t('title')}
                         </h1>
 
                         <p
@@ -67,7 +67,7 @@ const HeroSection: React.FC = () => {
                         className={`max-w-max animationShift tr-double-delay ${inView ? 'endShiftBtn' : 'startShiftBtn'
                             }`}
                     >
-                        {t('hero.button')}
+                        {t('button')}
                     </Button>
                 </div>
             </div>

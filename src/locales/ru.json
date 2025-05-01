@@ -1,4 +1,14 @@
 {
+    "title": "chics coin",
+    "button": "Начать",
+    "invitation": "Присоединиться сейчас",
+    "headlines": {
+        "ideology": "Идеология",
+        "tokenomics": "Токеномика",
+        "roadmap": "Дорожная карта",
+        "social": "Социальные сети"
+    },
+
     "navbar": {
         "logo": "Ваша компания",
         "menu": {
@@ -9,20 +19,11 @@
         }
     },
     "hero": {
-        "title": "chics coin",
-        "description": "Новый уровень взаимодействия в игровом обществе",
-        "button": "Начать"
+        "description": "Новый уровень взаимодействия в игровом обществе"
     },
     "ideology": {
-        "title": "Идеология",
         "description": "CHICS — криптовалюта для геймеров и стримеров",
         "toolDescription": "Удобный инструмент взаимодействия геймеров с популярными девушками-стримерами"
-    },
-    "tokenomics": {
-        "title": "Токеномика"
-    },
-    "roadmap": {
-        "title": "Дорожная карта"
     },
     "apps": {
         "availableOn": "Доступно в App Store и Google Play"
@@ -69,7 +70,6 @@
         "and": "и"
     },
     "footer": {
-        "title": "chics coin",
         "copyright": "© 2023 CHICS Coin. Все права защищены."
     }
 }

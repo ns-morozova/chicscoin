@@ -78,7 +78,7 @@ const Roadmap: React.FC = () => {
                     <h2 className={`relative mb-5 md:mb-10 lg:mb-12 font-medium text-center uppercase text-2xl md:text-5xl z-20 animationShift ${
                         inView ? 'endShift' : 'startShift'
                     }`}>
-                        {t('roadmap.title')}
+                        {t('headlines.roadmap')}
                     </h2>
 
                     <div className="relative flex flex-col gap-4 bg-transparent">

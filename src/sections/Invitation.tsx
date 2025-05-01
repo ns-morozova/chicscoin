@@ -16,7 +16,7 @@ const Invitation: React.FC = () => {
         <section className="py-8 lg:px-8 md:py-16">
             <div
                 ref={ref}
-                className="relative max-w-7xl mx-auto px-4 py-24 sm:py-44 md:px-8 md:py-56 lg:py-72 xl:py-80"
+                className="relative max-w-7xl mx-auto px-4 py-20 sm:py-36 md:px-8 md:py-44 lg:py-52 xl:py-64"
                 style={{
                     backgroundImage: "url('/images/banner-invitation.JPG')",
                     backgroundSize: 'cover',
@@ -29,7 +29,7 @@ const Invitation: React.FC = () => {
                             inView ? 'endShift' : 'startShift'
                     }`}
                     >
-                        Присоединиться сейчас
+                        {t('invitation')}
                     </h2>
 
                     <div
@@ -40,7 +40,7 @@ const Invitation: React.FC = () => {
                             type={ButtonType.Gradient}
                             className="max-w-max"
                         >
-                            {t('hero.button')}
+                            {t('button')}
                         </Button>
                     </div>
                 </div>

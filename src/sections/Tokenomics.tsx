@@ -72,7 +72,7 @@ const Tokenomics: React.FC = () => {
                 <h2 className={`mb-5 md:mb-10 lg:mb-12 font-medium text-center uppercase text-2xl md:text-5xl animationShift ${
                     inView ? 'endShift' : 'startShift'
                 }`}>
-                    {t('tokenomics.title')}
+                    {t('headlines.tokenomics')}
                 </h2>
 
                 <div className="flex flex-col gap-y-4 md:grid md:grid-cols-2 md:gap-x-4 lg:grid-cols-6">
