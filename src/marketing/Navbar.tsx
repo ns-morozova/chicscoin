@@ -7,14 +7,14 @@ import { useTranslation } from 'react-i18next';
 const Navbar: React.FC = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
-    const [currentLanguage, setCurrentLanguage] = useState('en');
+    const [currentLanguage, setCurrentLanguage] = useState('ru');
     const { t, i18n } = useTranslation();
 
     const menuItems = [
         { to: "ideology", label: t('headlines.ideology') },
         { to: "tokenomics", label: t('headlines.tokenomics') },
         { to: "roadmap", label: t('headlines.roadmap') },
-        { to: "social", label: t('headlines.social') },
+        { to: "apps", label: t('headlines.apps') },
     ];
 
     const dropdownRef = useRef<HTMLDivElement>(null);

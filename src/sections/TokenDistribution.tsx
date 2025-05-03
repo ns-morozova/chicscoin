@@ -38,7 +38,7 @@ const TokenDistribution: React.FC = () => {
                     {t('distribution.title')}
                 </h2>
 
-                <div className={`relative w-full animationShift tr-delay ${
+                <div className={`relative w-full animationShift tr-double-delay ${
                     inView ? 'endShift' : 'startShift'
                 }`}>
                     {/* Диаграмма */}

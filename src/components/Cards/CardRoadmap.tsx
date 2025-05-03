@@ -25,7 +25,7 @@ const CardRoadmap: React.FC<CardRoadmapProps> = ({ title, description, number, t
             `}
         >
             <h3
-                className={`relative text-xl w-max md:text-3xl font-medium md:pl-8 transition-colors duration-300
+                className={`relative text-xl md:text-3xl font-medium sm:w-max md:pl-8 transition-colors duration-300
                     ${type === CardRoadmapType.Pink ? 'text-[#c00aa2]' : 'text-[#14B8A6]'
                     }
                 `}

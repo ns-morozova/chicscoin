@@ -11,7 +11,7 @@ const Apps: React.FC = () => {
     });
 
     return (
-        <section id="social" className="px-4 py-8 lg:px-8 md:py-16">
+        <section id="apps" className="px-4 py-8 lg:px-8 md:py-16">
             <div
                 ref={ref}
                 className="relative max-w-7xl mx-auto py-10 bg-top-left sm:py-16 md:py-20 md:bg-center"

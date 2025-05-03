@@ -6,6 +6,7 @@
         "ideology": "Ideology",
         "tokenomics": "Tokenomics",
         "roadmap": "Roadmap",
+        "apps": "Mobile app",
         "social": "Social Media"
     },
 
@@ -22,11 +23,11 @@
         "description": "New level of interaction in the gaming community"
     },
     "ideology": {
-        "description": "CHICS — cryptocurrency for gamers and streamers",
+        "description": "Hold CHICS — play with the girls",
         "toolDescription": "A convenient tool for gamers to interact with popular female streamers"
     },
     "apps": {
-        "availableOn": "Available on App Store and Google Play"
+        "availableOn": "CHICS Mobile App"
     },
     "cardideology": {
         "translations": "Organization of translations",
