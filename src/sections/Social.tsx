@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
+import Telegram from '../assets/icons/telegram.svg';
+import Instagram from '../assets/icons/instagram.svg';
+import Discord from '../assets/icons/discord.svg';
+
 const Social: React.FC = () => {
     const socialLinks = [
-        { href: 'https://t.me/chicscoin', icon: '/icons/telegram.svg', alt: 'Telegram' },
-        { href: 'https://instagram.com/chicscoin', icon: '/icons/instagram.svg', alt: 'Instagram' },
-        { href: 'https://discord.com/', icon: '/icons/discord.svg', alt: 'Discord' },
+        { href: 'https://t.me/chicscoin', icon: Telegram, alt: 'Telegram' },
+        { href: 'https://instagram.com/chicscoin', icon: Instagram, alt: 'Instagram' },
+        { href: 'https://discord.com/', icon: Discord, alt: 'Discord' },
     ];
 
     const [ref, inView] = useInView({

@@ -84,7 +84,7 @@ const TokenDistribution: React.FC = () => {
                                 endAngle={270} // Конечный угол (полный круг)
                                 stroke="none" // Убираем обводку
                             >
-                                {mainData.map((entry, index) => (
+                                {mainData.map((_, index) => (
                                     <Cell
                                         key={`cell-main-${index}`}
                                         fill={index === 0 ? 'url(#mainGradient1)' : 'url(#mainGradient2)'}
@@ -105,7 +105,7 @@ const TokenDistribution: React.FC = () => {
                                 endAngle={270} // Конец на полном круге
                                 stroke="none" // Убираем обводку
                             >
-                                {outerArcData.map((entry, index) => (
+                                {outerArcData.map((_, index) => (
                                     <Cell
                                         key={`cell-outer-${index}`}
                                         fill={index === 0 ? 'url(#outerGradient1)' : 'url(#outerGradient2)'}

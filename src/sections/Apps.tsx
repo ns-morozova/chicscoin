@@ -2,8 +2,6 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useInView } from 'react-intersection-observer';
 
-// import Gradient from './components/Gradient.svg';
-
 import AppStore from '../assets/icons/AppStore.svg';
 import GooglePlay from '../assets/icons/GooglePlay.svg';
 
