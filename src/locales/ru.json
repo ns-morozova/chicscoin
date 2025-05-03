@@ -2,6 +2,7 @@
     "title": "chics coin",
     "button": "Начать",
     "invitation": "Присоединиться сейчас",
+    "dailymatches": "Ежедневные матчи и трансляции",
     "headlines": {
         "ideology": "Идеология",
         "tokenomics": "Токеномика",
@@ -71,6 +72,6 @@
         "and": "и"
     },
     "footer": {
-        "copyright": "© 2023 CHICS Coin. Все права защищены."
+        "copyright": "© 2025 CHICS Coin. Все права защищены."
     }
 }

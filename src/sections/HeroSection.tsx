@@ -52,7 +52,7 @@ const HeroSection: React.FC = () => {
                         </h1>
 
                         <p
-                            className={`text-center text-sm w-2/3 sm:w-1/3 md:text-base animationShift !delay-[300ms] ${inView ? 'endShift' : 'startShift'
+                            className={`text-center text-sm w-2/3 sm:w-auto md:text-base animationShift !delay-[300ms] ${inView ? 'endShift' : 'startShift'
                                 }`}
                         >
                             {t('hero.description')}
@@ -61,6 +61,7 @@ const HeroSection: React.FC = () => {
 
                     <Button
                         type={ButtonType.White}
+                        to="apps"
                         className={`max-w-max animationShift tr-double-delay ${inView ? 'endShiftBtn' : 'startShiftBtn'
                             }`}
                     >

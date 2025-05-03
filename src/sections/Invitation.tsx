@@ -1,6 +1,5 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button, ButtonType } from '../components/Button';
 import { useInView } from 'react-intersection-observer';
 
 const Invitation: React.FC = () => {
@@ -13,61 +12,49 @@ const Invitation: React.FC = () => {
 
     return (
         <section className="py-8 lg:px-8 md:py-16">
-            <div
-                ref={ref}
-                className="relative max-w-7xl mx-auto px-4 py-20 sm:py-36 md:px-8 md:py-44 lg:py-52 xl:py-64"
-                style={{
-                    backgroundImage: "url('/images/banner-invitation.JPG')",
-                    backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat',
-                }}
-            >
-                <div className="relative flex flex-col items-center z-10">
+            <div className="relative max-w-7xl mx-auto">
+                <div className="relative z-10">
                     <h2
-                        className={`mb-3 font-medium text-center text-xl md:text-4xl md:mb-6 animationShift ${
-                            inView ? 'endShift' : 'startShift'
-                    }`}
+                        className={`mb-3 font-medium text-center text-xl md:text-4xl md:mb-6 animationShift ${inView ? 'endShift' : 'startShift'
+                            }`}
                     >
-                        {t('invitation')}
+                        {t('dailymatches')}
                     </h2>
-
-                    <div
-                        className={`animationShift tr-double-delay ${
-                            inView ? 'endShiftBtn' : 'startShiftBtn'}`}
-                    >
-                        <Button
-                            type={ButtonType.Gradient}
-                            className="max-w-max"
-                        >
-                            {t('button')}
-                        </Button>
-                    </div>
                 </div>
-
                 <div
-                    className="absolute inset-0 w-full h-full"
+                    ref={ref}
+                    className="relative px-4 py-24 sm:py-40 md:px-8 md:py-48 lg:py-56 xl:py-72"
                     style={{
-                        background: 'linear-gradient(to top, rgba(0, 0, 0, 0.2) 90%, rgba(0, 0, 0, 1))',
+                        backgroundImage: "url('/images/banner-invitation.JPG')",
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
                     }}
-                ></div>
-                <div
-                    className="absolute inset-0 w-full h-full"
-                    style={{
-                        background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 90%, rgba(0, 0, 0, 1))',
-                    }}
-                ></div>
-                <div
-                    className="absolute inset-0 w-full h-full"
-                    style={{
-                        background: 'linear-gradient(to right, rgba(0, 0, 0, 0.2) 90%, rgba(0, 0, 0, 1))',
-                    }}
-                ></div>
-                <div
-                    className="absolute inset-0 w-full h-full"
-                    style={{
-                        background: 'linear-gradient(to left, rgba(0, 0, 0, 0.2) 90%, rgba(0, 0, 0, 1))',
-                    }}
-                ></div>
+                >
+                    <div
+                        className="absolute inset-0 w-full h-full"
+                        style={{
+                            background: 'linear-gradient(to top, rgba(0, 0, 0, 0.2) 90%, rgba(0, 0, 0, 1))',
+                        }}
+                    ></div>
+                    <div
+                        className="absolute inset-0 w-full h-full"
+                        style={{
+                            background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 90%, rgba(0, 0, 0, 1))',
+                        }}
+                    ></div>
+                    <div
+                        className="absolute inset-0 w-full h-full"
+                        style={{
+                            background: 'linear-gradient(to right, rgba(0, 0, 0, 0.2) 90%, rgba(0, 0, 0, 1))',
+                        }}
+                    ></div>
+                    <div
+                        className="absolute inset-0 w-full h-full"
+                        style={{
+                            background: 'linear-gradient(to left, rgba(0, 0, 0, 0.2) 90%, rgba(0, 0, 0, 1))',
+                        }}
+                    ></div>
+                </div>
             </div>
         </section>
     );

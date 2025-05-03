@@ -64,7 +64,7 @@ const Ideology: React.FC = () => {
         <section id="ideology" className="px-4 pb-8 lg:px-8 md:pt-8 md:pb-16">
             <div ref={ref} className="max-w-7xl mx-auto">
                 <div className="bg-gradient-to-b from-[#AF0092] to-[#14B8A6] rounded-3xl text-center px-4 py-10 sm:pb-4 md:px-8 md:pt-20 md:pb-8">
-                    <div className="mx-auto w-11/12 sm:w-3/5 md:w-3/4 lg:w-3/5 lg:max-w-lg">
+                    <div className="">
                         <h2
                             className={`font-medium text-xl mb-2 md:mb-4 md:text-4xl lg:px-3 animationShift ${inView ? 'endShift' : 'startShift'
                                 }`}
@@ -72,7 +72,7 @@ const Ideology: React.FC = () => {
                             {t('ideology.description')}
                         </h2>
                         <p
-                            className={`text-sm mb-8 md:mb-16 md:text-base lg:px-16 animationShift tr-delay ${inView ? 'endShift' : 'startShift'
+                            className={`text-sm mb-8 md:mb-16 md:text-base lg:px-16 mx-auto w-11/12 sm:w-3/5 md:w-3/4 lg:w-3/5 lg:max-w-lg animationShift tr-delay ${inView ? 'endShift' : 'startShift'
                                 }`}
                         >
                             {t('ideology.toolDescription')}

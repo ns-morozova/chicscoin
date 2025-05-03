@@ -3,13 +3,13 @@ import { useInView } from 'react-intersection-observer';
 
 import Telegram from '../assets/icons/telegram.svg';
 import Instagram from '../assets/icons/instagram.svg';
-import Discord from '../assets/icons/discord.svg';
+import Twitch from '../assets/icons/twitch.svg';
 
 const Social: React.FC = () => {
     const socialLinks = [
         { href: 'https://t.me/chicscoin', icon: Telegram, alt: 'Telegram' },
         { href: 'https://instagram.com/chicscoin', icon: Instagram, alt: 'Instagram' },
-        { href: 'https://discord.com/', icon: Discord, alt: 'Discord' },
+        { href: 'https://www.twitch.tv/mmargaret_v', icon: Twitch, alt: 'Twitch' },
     ];
 
     const [ref, inView] = useInView({

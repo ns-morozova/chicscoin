@@ -2,6 +2,7 @@
     "title": "chics coin",
     "button": "Get started",
     "invitation": "Join now",
+    "dailymatches": "Daily matches and streaming",
     "headlines": {
         "ideology": "Ideology",
         "tokenomics": "Tokenomics",
@@ -71,6 +72,6 @@
         "and": "and"
     },
     "footer": {
-        "copyright": "© 2023 CHICS Coin. All rights reserved."
+        "copyright": "© 2025 CHICS Coin. All rights reserved."
     }
 }

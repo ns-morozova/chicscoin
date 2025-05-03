@@ -79,28 +79,33 @@ const Apps: React.FC = () => {
                         </div>
 
                         <div className="flex justify-center gap-5 sm:flex-col">
-                            <div
-                                className={`w-full max-w-40 md:max-w-44 lg:max-w-52 cursor-pointer animationShift !delay-[1200ms] ${
-                                    inView ? 'endShift' : 'startShift'
-                                }`}
+                            <a
+                                href="/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`w-full max-w-40 md:max-w-44 lg:max-w-52 cursor-pointer animationShift !delay-[1200ms] ${inView ? 'endShift' : 'startShift'
+                                    }`}
                             >
                                 <img
                                     alt="App Store"
                                     src={AppStore}
                                     className="w-full h-auto object-cover"
                                 />
-                            </div>
-                            <div
-                                className={`w-full max-w-40 md:max-w-44 lg:max-w-52 cursor-pointer animationShift !delay-[1600ms] ${
-                                    inView ? 'endShift' : 'startShift'
-                                }`}
+                            </a>
+
+                            <a
+                                href="/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`w-full max-w-40 md:max-w-44 lg:max-w-52 cursor-pointer animationShift !delay-[1600ms] ${inView ? 'endShift' : 'startShift'
+                                    }`}
                             >
                                 <img
                                     alt="Google Play"
                                     src={GooglePlay}
                                     className="w-full h-auto object-cover"
                                 />
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
