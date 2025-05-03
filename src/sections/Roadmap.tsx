@@ -58,7 +58,7 @@ const Roadmap: React.FC = () => {
     }, [inView]);
 
     return (
-        <section id="roadmap" className="px-4 py-10 lg:px-8 md:py-44">
+        <section id="roadmap" className="px-4 pt-8 pb-10 lg:px-8 md:pt-32 md:pb-16">
             <div ref={ref} className="relative max-w-7xl mx-auto">
                 <div className="relative z-20">
                     <div

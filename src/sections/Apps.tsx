@@ -2,6 +2,11 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useInView } from 'react-intersection-observer';
 
+// import Gradient from './components/Gradient.svg';
+
+import AppStore from '../assets/icons/AppStore.svg';
+import GooglePlay from '../assets/icons/GooglePlay.svg';
+
 const Apps: React.FC = () => {
     const { t } = useTranslation();
 
@@ -83,7 +88,7 @@ const Apps: React.FC = () => {
                             >
                                 <img
                                     alt="App Store"
-                                    src="/icons/AppStore.svg"
+                                    src={AppStore}
                                     className="w-full h-auto object-cover"
                                 />
                             </div>
@@ -94,7 +99,7 @@ const Apps: React.FC = () => {
                             >
                                 <img
                                     alt="Google Play"
-                                    src="/icons/GooglePlay.svg"
+                                    src={GooglePlay}
                                     className="w-full h-auto object-cover"
                                 />
                             </div>

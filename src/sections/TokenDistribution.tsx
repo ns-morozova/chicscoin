@@ -29,7 +29,7 @@ const TokenDistribution: React.FC = () => {
     ];
 
     return (
-        <section className="px-4 py-8 lg:px-8 md:py-16">
+        <section className="px-4 py-8 lg:px-8 md:pt-16">
             <div ref={ref} className="max-w-7xl mx-auto flex flex-col items-center justify-center">
                 {/* Заголовок */}
                 <h2 className={`text-2xl font-bold mb-2 text-center animationShift ${
@@ -127,27 +127,7 @@ const TokenDistribution: React.FC = () => {
                         </div>
                     </div>
                 </div>
-
-                {/* Подробное описание */}
-                <div className="mt-4 text-center">
-                    <p className={`font-medium mb-4 md:mb-6 animationShift !delay-[1000ms] ${
-                        inView ? 'endShift' : 'startShift'
-                    }`}>
-                        {t('distribution.totalEmission')}
-                    </p>
-                    <ul className="flex flex-col items-start gap-2 text-left list-disc list-inside text-sm mx-auto sm:w-3/4 md:text-base">
-                        <li className={`animationShift !delay-[1200ms] ${inView ? 'endShift' : 'startShift'
-                    }`}>{t('distribution.openMarket')}</li>
-                        <li className={`animationShift !delay-[1400ms] ${inView ? 'endShift' : 'startShift'
-                        }`}>
-                            {t('distribution.developersAndInvestors')} <br />
-                            <span className="pl-3.5">
-                                ({t('distribution.ofWhich')} {t('distribution.frozenUntil2025')} {t('distribution.and')}{' '}
-                                {t('distribution.marketingAndCommunity')})
-                            </span>
-                        </li>
-                    </ul>
-                </div>
+                
             </div>
         </section>
     );
