@@ -80,7 +80,7 @@ const Apps: React.FC = () => {
 
                         <div className="flex justify-center gap-5 sm:flex-col">
                             <a
-                                href="/"
+                                href="https://www.apple.com/app-store/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={`w-full max-w-40 md:max-w-44 lg:max-w-52 cursor-pointer animationShift !delay-[1200ms] ${inView ? 'endShift' : 'startShift'
@@ -94,7 +94,7 @@ const Apps: React.FC = () => {
                             </a>
 
                             <a
-                                href="/"
+                                href="https://play.google.com/store/apps/details?id=com.chics.flutter.android.chics&hl=ru"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={`w-full max-w-40 md:max-w-44 lg:max-w-52 cursor-pointer animationShift !delay-[1600ms] ${inView ? 'endShift' : 'startShift'
