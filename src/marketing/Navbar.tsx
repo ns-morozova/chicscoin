@@ -1,10 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-scroll';
+import { useLocation, useNavigate } from 'react-router-dom';
+// import { Link } from 'react-scroll';
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useTranslation } from 'react-i18next';
 
 const Navbar: React.FC = () => {
+    const location = useLocation();
+    const navigate = useNavigate();
+    const isHomePage = location.pathname === '/';
+
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [currentLanguage, setCurrentLanguage] = useState('ru');
@@ -18,6 +23,34 @@ const Navbar: React.FC = () => {
     ];
 
     const dropdownRef = useRef<HTMLDivElement>(null);
+
+    const handleLogoClick = () => {
+        if (isHomePage) {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+          });
+        } else {
+          navigate('/');
+        }
+      };
+
+    const handleMenuItemClick = (to: string) => {
+        if (isHomePage) {
+          document.querySelector(`#${to}`)?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
+        } else {
+          navigate('/');
+          setTimeout(() => {
+            document.querySelector(`#${to}`)?.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+            });
+          }, 100);
+        }
+    };
 
     const changeLanguage = (lng: string) => {
         i18n.changeLanguage(lng);
@@ -65,7 +98,7 @@ const Navbar: React.FC = () => {
 
                     <div className="relative flex items-center justify-end px-3 py-3 sm:px-4 sm:py-3 md:px-5 md:py-3.5 lg:justify-center lg:py-4.5">
                         <div className="absolute left-1.5 flex lg:flex-1">
-                            <Link
+                            {/* <Link
                                 to="home"
                                 smooth={true}
                                 duration={600}
@@ -79,7 +112,20 @@ const Navbar: React.FC = () => {
                                         className="w-full h-auto object-cover"
                                     />
                                 </div>
-                            </Link>
+                            </Link> */}
+                            <div
+                                onClick={handleLogoClick}
+                                className="-m-1.5 p-1.5 cursor-pointer"
+                                >
+                                <span className="sr-only">{t('navbar.logo')}</span>
+                                <div className="w-10 md:w-11 lg:w-13 h-auto rounded-full hover:rotate-12 hover:shadow-[0_0_15px] hover:scale-105 hover:shadow-teal-300 transition-all duration-500 ease-out overflow-hidden">
+                                    <img
+                                    alt={t('navbar.logo')}
+                                    src="/images/chiks-coin2.png"
+                                    className="w-full h-auto object-cover"
+                                    />
+                                </div>
+                            </div>
                         </div>
 
                         <div className="flex lg:hidden">
@@ -94,7 +140,7 @@ const Navbar: React.FC = () => {
                         </div>
 
                         <div className="hidden text-base font-medium lg:flex lg:gap-x-14 xl:gap-x-20">
-                            {menuItems.map((item) => (
+                            {/* {menuItems.map((item) => (
                                 <Link
                                     key={item.to}
                                     to={item.to}
@@ -105,10 +151,19 @@ const Navbar: React.FC = () => {
                                     {item.label}
                                     <span className="absolute -bottom-0.5 left-1/2 h-px w-0 -translate-x-1/2 bg-teal-500 transition-all duration-300 group-hover:w-full"></span>
                                 </Link>
+                            ))} */}
+                            {menuItems.map((item) => (
+                                <div
+                                    key={item.to}
+                                    onClick={() => handleMenuItemClick(item.to)} // Добавляем обработчик клика
+                                    className="relative group hover:text-teal-200 transition-colors duration-300 px-1 cursor-pointer"
+                                    >
+                                    {item.label}
+                                    <span className="absolute -bottom-0.5 left-1/2 h-px w-0 -translate-x-1/2 bg-teal-500 transition-all duration-300 group-hover:w-full"></span>
+                                </div>
                             ))}
                         </div>
                     </div>
-                    
                 </nav>
                 
                 <div
@@ -172,7 +227,7 @@ const Navbar: React.FC = () => {
                     <div className="mt-6 flow-root">
                         <div className="-my-6 divide-y divide-gray-500/25">
                             <div className="font-medium text-base flex flex-col gap-6 py-6">
-                                {menuItems.map((item) => (
+                                {/* {menuItems.map((item) => (
                                     <Link
                                         key={item.to}
                                         to={item.to}
@@ -184,6 +239,19 @@ const Navbar: React.FC = () => {
                                         {item.label}
                                         <span className="absolute -bottom-0.5 left-1/2 h-px w-0 -translate-x-1/2 bg-teal-500 transition-all duration-300 group-hover:w-full"></span>
                                     </Link>
+                                ))} */}
+                                {menuItems.map((item) => (
+                                    <div
+                                        key={item.to}
+                                        onClick={() => {
+                                        handleMenuItemClick(item.to);
+                                        setMobileMenuOpen(false);
+                                        }}
+                                        className="relative -mx-3 w-max group hover:text-teal-200 transition-colors duration-300 px-1 cursor-pointer"
+                                    >
+                                        {item.label}
+                                        <span className="absolute -bottom-0.5 left-1/2 h-px w-0 -translate-x-1/2 bg-teal-500 transition-all duration-300 group-hover:w-full"></span>
+                                    </div>
                                 ))}
                             </div>
                         </div>

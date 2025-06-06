@@ -1,9 +1,14 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-scroll';
+import { useLocation, useNavigate } from 'react-router-dom';
+// import { Link } from 'react-scroll';
 import { useInView } from 'react-intersection-observer';
 
 const Footer: React.FC = () => {
+    const location = useLocation();
+    const navigate = useNavigate();
+    const isHomePage = location.pathname === '/';
+
     const { t } = useTranslation();
 
     // Хук для отслеживания видимости футера
@@ -11,6 +16,17 @@ const Footer: React.FC = () => {
         triggerOnce: true,
         threshold: 0.1,
     });
+
+    const handleLogoClick = () => {
+        if (isHomePage) {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+          });
+        } else {
+          navigate('/');
+        }
+      };
 
     return (
         <footer className="px-4 pt-8 lg:px-8 md:pt-16">
@@ -32,7 +48,7 @@ const Footer: React.FC = () => {
                     </p>
                 </div>
 
-                <Link
+                {/* <Link
                     to="home"
                     smooth={true}
                     duration={600}
@@ -48,7 +64,23 @@ const Footer: React.FC = () => {
                             className="w-full h-auto object-cover"
                         />
                     </div>
-                </Link>
+                </Link> */}
+
+                <div
+                    onClick={handleLogoClick}
+                    className="-m-1.5 p-1.5 cursor-pointer"
+                    >
+                    <span className="sr-only">{t('navbar.logo')}</span>
+                    <div
+                        className="w-16 md:w-24 lg:w-28 h-auto rounded-full hover:rotate-12 hover:shadow-[0_0_50px] hover:scale-105 hover:shadow-teal-600 transition-all duration-500 ease-out overflow-hidden"
+                    >
+                        <img
+                        alt={t('navbar.logo')}
+                        src="/images/chiks-coin2.png"
+                        className="w-full h-auto object-cover"
+                        />
+                    </div>
+                 </div>
 
                 <div
                     className={`absolute top-0 left-0 w-full h-px bg-gradient-to-r from-[#AF0092] to-[#14B8A6] md:h-0.5 transition-all duration-2000 ease-out ${inView ? 'opacity-100' : 'opacity-0'
