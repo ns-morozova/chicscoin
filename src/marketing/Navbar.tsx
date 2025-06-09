@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 // import { Link } from 'react-scroll';
 import { Dialog, DialogPanel } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
@@ -20,6 +20,7 @@ const Navbar: React.FC = () => {
         { to: "tokenomics", label: t('headlines.tokenomics') },
         { to: "roadmap", label: t('headlines.roadmap') },
         { to: "apps", label: t('headlines.apps') },
+        // { to: "analytics", label: t('headlines.analytics') },
     ];
 
     const dropdownRef = useRef<HTMLDivElement>(null);
@@ -139,7 +140,7 @@ const Navbar: React.FC = () => {
                             </button>
                         </div>
 
-                        <div className="hidden text-base font-medium lg:flex lg:gap-x-14 xl:gap-x-20">
+                        <div className="hidden text-base font-medium lg:flex lg:w-5/6 lg:justify-between xl:w-max xl:gap-x-20">
                             {/* {menuItems.map((item) => (
                                 <Link
                                     key={item.to}
@@ -162,6 +163,14 @@ const Navbar: React.FC = () => {
                                     <span className="absolute -bottom-0.5 left-1/2 h-px w-0 -translate-x-1/2 bg-teal-500 transition-all duration-300 group-hover:w-full"></span>
                                 </div>
                             ))}
+
+                            <Link 
+                                to="dexscreener"
+                                className="relative group hover:text-teal-200 transition-colors duration-300 px-1 cursor-pointer"
+                            >
+                                {t('headlines.analytics')}
+                                <span className="absolute -bottom-0.5 left-1/2 h-px w-0 -translate-x-1/2 bg-teal-500 transition-all duration-300 group-hover:w-full"></span>
+                            </Link>
                         </div>
                     </div>
                 </nav>
@@ -244,8 +253,8 @@ const Navbar: React.FC = () => {
                                     <div
                                         key={item.to}
                                         onClick={() => {
-                                        handleMenuItemClick(item.to);
-                                        setMobileMenuOpen(false);
+                                            handleMenuItemClick(item.to);
+                                            setMobileMenuOpen(false);
                                         }}
                                         className="relative -mx-3 w-max group hover:text-teal-200 transition-colors duration-300 px-1 cursor-pointer"
                                     >
@@ -253,6 +262,15 @@ const Navbar: React.FC = () => {
                                         <span className="absolute -bottom-0.5 left-1/2 h-px w-0 -translate-x-1/2 bg-teal-500 transition-all duration-300 group-hover:w-full"></span>
                                     </div>
                                 ))}
+
+                                <Link 
+                                    to="dexscreener"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className="relative -mx-3 w-max group hover:text-teal-200 transition-colors duration-300 px-1 cursor-pointer"
+                                >
+                                    {t('headlines.analytics')}
+                                    <span className="absolute -bottom-0.5 left-1/2 h-px w-0 -translate-x-1/2 bg-teal-500 transition-all duration-300 group-hover:w-full"></span>
+                                </Link>
                             </div>
                         </div>
                     </div>
