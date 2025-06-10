@@ -74,5 +74,24 @@
     },
     "footer": {
         "copyright": "© 2025 CHICS Coin. All rights reserved."
+    },
+    "privacy": {
+        "privacy_policy_title": "Privacy Policy for ChicsCoin App",
+        "effective_date": "Effective Date: May 20, 2025",
+        "intro_text": "At ChicsCoin, we value your privacy and are committed to protecting any information you may share with us. This Privacy Policy explains what data we collect, how we use it, and your rights regarding that information.",
+        "data_collection_title": "Data Collection",
+        "data_collection_text": "We do not collect any personally identifiable information from users when using the ChicsCoin app, except where explicitly required for specific features (which will be clearly indicated).",
+        "embedded_browser_title": "Embedded Browser (WebView)",
+        "embedded_browser_text": "This app uses an embedded browser (WebView) to display external content. We do not collect cookies, tracking data, or any user information through this feature.",
+        "use_of_data_title": "Use of Data",
+        "use_of_data_text": "If you voluntarily provide any data (e.g., when contacting support), it will only be used for the following purposes: Responding to your inquiries; Supporting the app’s functionality; Improving the user experience (if applicable). We do not sell or share your data with third parties.",
+        "security_title": "Security",
+        "security_text": "We take reasonable measures to protect any information you provide against unauthorized access, disclosure, alteration, or destruction.",
+        "third_party_content_title": "Third-Party Content",
+        "third_party_content_text": "The app may contain links to or display content from external websites. We do not control the privacy practices or content of these third-party sites and recommend reviewing their respective privacy policies.",
+        "changes_to_policy_title": "Changes to This Policy",
+        "changes_to_policy_text": "We may update this Privacy Policy from time to time. Any changes will be communicated through the app or by other appropriate means, in accordance with applicable laws.",
+        "contact_info_title": "Contact Information",
+        "contact_info_text": "If you have any questions about this Privacy Policy, you can contact us at: Email: chicscoin@gmail.com"
     }
 }

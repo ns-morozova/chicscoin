@@ -3,10 +3,10 @@ import React from 'react';
 const DexScreenerEmbed: React.FC = () => {
     return (
         <section className="px-4 py-8 lg:px-8 md:py-16 text-white">
-            <div className="h-20 sm:h-14 md:h-10 lg:h-16"></div>
+            <div className="h-20 md:h-16 lg:h-20"></div>
             <div className="max-w-7xl mx-auto flex flex-col items-center justify-center">
                 {/* Заголовок */}
-                <h1 className="text-2xl font-bold mb-4">ChicsCoin</h1>
+                <h1 className="mb-4 font-medium text-xl md:text-4xl">ChicsCoin</h1>
 
                 {/* Описание */}
                 <p className="text-lg mb-4">
